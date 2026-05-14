@@ -1,0 +1,29 @@
+.DS_Store
+node_modules/
+.gradle/
+
+# Internal app/build/operations files not needed for the public GitHub Pages site.
+android/
+app/
+store/
+AFFILIATE_SETUP.md
+index_modified.html
+capacitor.config.json
+package-lock.json
+package.json
+scripts/
+
+# Android build outputs and local machine config
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/keystore.properties
+android/*.jks
+android/*.keystore
+android/app/*.jks
+android/app/*.keystore
+
+# Generated release bundles are rebuilt locally and should not be committed.
+*.aab
+*.apk

@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日行程詳細 · 瑞士 2026.06.02–06.09</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --swiss: #c8102e;
+  --swiss-deep: #9b0c23;
+  --alpine: #2c4a5e;
+  --ink: #1a2530;
+  --ink-soft: #4a5568;
+  --gold: #b08a3c;
+  --paper: #faf8f5;
+  --paper-2: #f4f0e8;
+  --line: #d4cfc1;
+  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.04);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Noto Serif TC", serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+.sans { font-family: "Noto Sans TC", sans-serif; }
+
+a { color: var(--swiss-deep); text-decoration: none; border-bottom: 1px dotted currentColor; }
+a:hover { color: var(--swiss); }
+
+/* Top nav */
+nav.top {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+nav.top .inner {
+  max-width: 1280px; margin: 0 auto;
+  padding: 12px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  flex-wrap: wrap;
+}
+nav.top .brand {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900; font-size: 16px;
+}
+nav.top .brand .accent { color: var(--swiss); }
+nav.top ul {
+  display: flex; gap: 4px; list-style: none;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 12px;
+}
+nav.top ul a {
+  display: block; padding: 6px 10px; border-radius: 4px;
+  color: var(--ink-soft); text-transform: uppercase;
+  letter-spacing: 1.5px; border: 0;
+}
+nav.top ul a:hover { background: var(--paper-2); color: var(--swiss-deep); }
+nav.top ul a.active { background: var(--swiss); color: white; }
+
+/* Day tabs */
+.day-tabs {
+  background: var(--ink);
+  position: sticky; top: 49px; z-index: 99;
+  padding: 8px 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.day-tabs .inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; gap: 6px;
+}
+.day-tabs a {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.85);
+  border: 0; border-radius: 4px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 11px; letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.day-tabs a:hover { background: rgba(255,255,255,.15); color: white; }
+.day-tabs a.active { background: var(--swiss); color: white; }
+
+/* Hero */
+header.hero {
+  text-align: center;
+  padding: 48px 24px 32px;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--alpine) 100%);
+  color: white;
+}
+header.hero h1 {
+  font-family: "Noto Serif TC", serif;
+  font-size: 32px; font-weight: 900; letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+header.hero .swiss-cross {
+  display: inline-block;
+  width: 18px; height: 18px;
+  background: var(--swiss);
+  position: relative; vertical-align: middle;
+  margin: 0 6px;
+}
+header.hero .swiss-cross::before, header.hero .swiss-cross::after {
+  content: ''; position: absolute; background: white;
+}
+header.hero .swiss-cross::before {
+  top: 4px; left: 7px; width: 4px; height: 10px;
+}
+header.hero .swiss-cross::after {
+  top: 7px; left: 4px; width: 10px; height: 4px;
+}
+header.hero .sub {
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(255,255,255,.75);
+  font-size: 14px; letter-spacing: 1px;
+}
+header.hero .dates {
+  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(255,255,255,.6);
+  letter-spacing: 2px;
+}
+
+/* Day card */
+.day-card {
+  max-width: 1100px; margin: 32px auto;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.day-head {
+  padding: 24px 32px;
+  background: linear-gradient(135deg, var(--swiss-deep) 0%, var(--alpine) 100%);
+  color: white;
+}
+.day-head.gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--swiss-deep) 100%);
+}
+.day-head .num {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,.7);
+  margin-bottom: 4px;
+}
+.day-head h2 {
+  font-family: "Noto Serif TC", serif;
+  font-size: 26px; font-weight: 900; line-height: 1.3;
+  margin-bottom: 8px;
+}
+.day-head .meta {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 13px; color: rgba(255,255,255,.85);
+  line-height: 1.7;
+}
+.day-head .meta strong { color: white; }
+
+.day-body { padding: 24px 32px; }
+
+/* Quick Facts strip */
+.quick-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--paper-2);
+  border-radius: 6px;
+}
+.qf {
+  text-align: center;
+}
+.qf .label {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 10px; letter-spacing: 1.5px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.qf .value {
+  font-family: "Noto Serif TC", serif;
+  font-size: 15px; font-weight: 700;
+  color: var(--ink);
+}
+.qf .value.big {
+  font-size: 18px; color: var(--swiss-deep);
+}
+
+/* Section block */
+.sec {
+  margin: 24px 0;
+}
+.sec h3 {
+  font-family: "Noto Serif TC", serif;
+  font-size: 17px; font-weight: 700;
+  color: var(--swiss-deep);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--paper-2);
+}
+
+/* Timeline */
+.tl {
+  list-style: none;
+}
+.tl li {
+  display: flex;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--line);
+  gap: 18px;
+}
+.tl li:last-child { border-bottom: 0; }
+.tl .time {
+  flex-shrink: 0;
+  width: 110px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 13px; font-weight: 700;
+  color: var(--swiss-deep);
+  padding-top: 2px;
+}
+.tl .time .dur {
+  display: block;
+  font-size: 10px;
+  color: var(--ink-soft);
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+.tl .content {
+  flex: 1;
+}
+.tl .content h4 {
+  font-family: "Noto Serif TC", serif;
+  font-size: 15px; font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+.tl .content p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 13px; color: var(--ink-soft); line-height: 1.75;
+}
+.tl .content .tags {
+  margin-top: 6px;
+  display: flex; gap: 6px; flex-wrap: wrap;
+}
+.tl .tag {
+  display: inline-block;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: var(--paper-2);
+  color: var(--ink-soft);
+  letter-spacing: 1px;
+}
+.tl .tag.ok { background: #e8f5e9; color: #1b5e20; }
+.tl .tag.gold { background: #fff8eb; color: var(--gold); border: 1px solid var(--gold); }
+.tl .tag.must { background: #ffe8eb; color: var(--swiss-deep); }
+.tl .tag.tip { background: #e3f2fd; color: #1565c0; }
+
+/* Info boxes */
+.box {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-left: 4px solid var(--alpine);
+  background: var(--paper-2);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+}
+.box.warn { border-color: var(--swiss); background: #fff5f6; }
+.box.gold { border-color: var(--gold); background: #fff8eb; }
+.box.ok { border-color: #4caf50; background: #e8f5e9; }
+.box .label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+  color: var(--ink);
+}
+
+/* Cards grid (hotel / meals) */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+.mini-card {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 13px;
+}
+.mini-card .title {
+  font-family: "Noto Serif TC", serif;
+  font-size: 14px; font-weight: 700;
+  color: var(--swiss-deep);
+  margin-bottom: 6px;
+}
+.mini-card .sub {
+  font-size: 11px; color: var(--ink-soft);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+.mini-card p { color: var(--ink-soft); line-height: 1.7; }
+.mini-card .booking {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+/* Tables */
+table.std {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 13px;
+  margin: 8px 0;
+}
+table.std th {
+  background: var(--ink);
+  color: white;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 11px; letter-spacing: 1px;
+  font-weight: 500;
+}
+table.std td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  vertical-align: top;
+}
+table.std tr:hover td { background: var(--paper-2); }
+table.std strong { color: var(--ink); }
+
+/* STP highlight */
+.stp-strip {
+  margin: 12px 0;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #fff8eb 100%);
+  border-radius: 6px;
+  border-left: 4px solid #4caf50;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 13px;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.stp-strip .stp-label {
+  font-weight: 700;
+  color: #1b5e20;
+  letter-spacing: 1px;
+}
+.stp-strip .stp-value {
+  font-weight: 700;
+  color: var(--swiss-deep);
+  font-size: 16px;
+}
+
+/* Anti-aging strip */
+.aging-strip {
+  margin: 12px 0;
+  padding: 12px 16px;
+  background: #f3e5f5;
+  border-radius: 6px;
+  border-left: 4px solid #6a1b9a;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 13px;
+}
+.aging-strip .label {
+  font-weight: 700;
+  color: #4a148c;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+footer {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--ink-soft);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 12px;
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+}
+
+/* Print */
+@media print {
+  nav.top, .day-tabs { display: none; }
+  .day-card { page-break-after: always; box-shadow: none; }
+}
+
+@media (max-width: 720px) {
+  .tl li { flex-direction: column; gap: 6px; }
+  .tl .time { width: 100%; }
+  .day-head { padding: 20px; }
+  .day-body { padding: 16px 20px; }
+  .day-head h2 { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="inner">
+    <div class="brand">湖上山內雙軸 <span class="accent">·</span> 每日詳細</div>
+    <ul>
+      <li><a href="index.html">總覽</a></li>
+      <li><a href="daily.html" class="active">每日詳細</a></li>
+      <li><a href="confirm.html">訂購確認</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="day-tabs">
+  <div class="inner">
+    <a href="#d1">D1 6/2 二 Vevey</a>
+    <a href="#d2">D2 6/3 三 Lavaux→Rolle</a>
+    <a href="#d3">D3 6/4 四 Mürren+Schilthorn</a>
+    <a href="#d4">D4 6/5 五 Jungfraujoch→Giessbach</a>
+    <a href="#d5">D5 6/6 六 Lucerne 山丘</a>
+    <a href="#d6">D6 6/7 日 Rigi+Bürgenstock</a>
+    <a href="#d7">D7 6/8 一 Bern→Zurich</a>
+    <a href="#d8">D8 6/9 二 ZRH→LHR</a>
+  </div>
+</div>
+
+<header class="hero">
+  <h1>湖上山內雙軸<span class="swiss-cross"></span>每日詳細</h1>
+  <div class="sub">8 日 8 飯店 8 種抗老場域 ・ 跨 283 年瑞士旅館史</div>
+  <div class="dates">2026.06.02 TUE — 06.09 TUE</div>
+</header>
+
+<!-- ============ DAY 1 ============ -->
+<article id="d1" class="day-card">
+  <header class="day-head">
+    <div class="num">DAY 01 · 06.02 TUE</div>
+    <h2>LHR → GVA → Vevey 湖東 Belle Époque 首夜</h2>
+    <div class="meta">
+      <strong>主軸：</strong>抵瑞首日 + 時差恢復 + Lake Geneva 湖東 Belle Époque<br>
+      <strong>住宿：</strong>Hôtel des Trois Couronnes Vevey · 1842<br>
+      <strong>海拔：</strong>385m（湖畔平緩）
+    </div>
+  </header>
+  <div class="day-body">
+
+    <div class="quick-facts">
+      <div class="qf"><div class="label">總飛行 + 火車</div><div class="value">~11 hrs</div></div>
+      <div class="qf"><div class="label">最高點</div><div class="value">385m 湖畔</div></div>
+      <div class="qf"><div class="label">STP 啟用日</div><div class="value big">★ 是</div></div>
+      <div class="qf"><div class="label">STP 節省</div><div class="value">CHF 35</div></div>
+      <div class="qf"><div class="label">需訂位</div><div class="value">無</div></div>
+    </div>
+
+    <div class="sec">
+      <h3>🛫 行前必做（5/31 起）</h3>
+      <ul style="font-family:'Noto Sans TC',sans-serif;font-size:13px;line-height:1.9;padding-left:20px;">
+        <li>申請 UK ETA（gov.uk/eta，£10，24h 內核發）</li>
+        <li>Swiss LX 355 線上 check-in（出發前 24h 開放）</li>
+        <li>下載 SBB Mobile App + 綁定 STP 8 日一等艙</li>
+        <li>iCloud 備份所有票券 QR + 訂位代號</li>
+        <li>飯店 email 確認抵達 18:45 late check-in + Lake View Junior Suite</li>
+      </ul>
+    </div>
+
+    <div class="sec">
+      <h3>⏱ 詳細時序</h3>
+      <ul class="tl">
+        <li>
+          <div class="time">07:00<span class="dur">LHR T4</span></div>
+          <div class="content">
+            <h4>Etihad EY11 抵 LHR T4</h4>
+            <p>輕裝（手提 7kg）直接通過英國海關（UK ETA 已申請）。EY61 與 LX 355 為分票，無托運行李省 30-45 分。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">07:30<span class="dur">T4→T2</span></div>
+          <div class="content">
+            <h4>跨航廈轉乘 Heathrow Express</h4>
+            <p>UK 入境後直接搭 Heathrow Express T4→T2/3（免費 inter-terminal，5 分）。Swiss LX 在 T2。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">08:00<span class="dur">⭐ Standby SOP</span></div>
+          <div class="content">
+            <h4>T2 Swiss Service Desk 申請 Earlier Flight</h4>
+            <p>Economy Flex 含 Earlier flight 免費期權。標準台詞：<em>「I have an Economy Flex booking on LX 355. May I request a same-day earlier flight standby to LX 353 / LX 351?」</em></p>
+            <div class="tags"><span class="tag gold">免費期權</span><span class="tag tip">早班成功可救 D1 三館</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">08:30–13:00<span class="dur">Lounge</span></div>
+          <div class="content">
+            <h4>T2 Plaza Premium Lounge 補眠 + 早餐</h4>
+            <p>£35 / 3h（如有 Priority Pass 信用卡可免費）。淋浴 + 熱食 + 香檳 + 安靜睡眠區。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:25–17:05<span class="dur">LX 355</span></div>
+          <div class="content">
+            <h4>LX 355 LHR T2 → GVA T1（1h40）</h4>
+            <p>已訂 Economy Flex GBP ~162。A220-300 直飛。窗位看 Lake Geneva 進場。</p>
+            <div class="tags"><span class="tag ok">已訂購</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:05<span class="dur">GVA 入境</span></div>
+          <div class="content">
+            <h4>抵 GVA + STP 啟用</h4>
+            <p>下機後直接到機場下方 Genève Aéroport SBB 站，櫃台啟用 STP 8 日一等艙（連續 8 日有效）。月台層 Coop Pronto 採購輕食。</p>
+            <div class="tags"><span class="tag tip">STP 啟用點</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:42–18:24<span class="dur">IR1</span></div>
+          <div class="content">
+            <h4>GVA → Lausanne</h4>
+            <p>每小時 42 分發車 IR1 直達。一等艙寬敞，沿途 Lavaux 葡萄園與日內瓦湖。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">18:30–18:42<span class="dur">S 12 分</span></div>
+          <div class="content">
+            <h4>Lausanne → Vevey（S-Bahn）</h4>
+            <p>月台轉乘空檔 6 分。Vevey 站出站步行 6 分至 Trois Couronnes。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">18:45<span class="dur">★ 入住</span></div>
+          <div class="content">
+            <h4>Hôtel des Trois Couronnes 入住</h4>
+            <p>1842 Belle Époque 湖畔大飯店。建議房型 <strong>Lake View Junior Suite</strong>——直面日內瓦湖與薩瓦阿爾卑斯。</p>
+            <div class="tags"><span class="tag gold">Belle Époque 首夜</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">19:00–19:45<span class="dur">可選</span></div>
+          <div class="content">
+            <h4>Funi Vevey-Mont Pèlerin 1900 古纜車（如體力允許）</h4>
+            <p>飯店步行 8 分至 Funi 山下站。5 分鐘登 1,084m 山頂台地，俯瞰日內瓦湖 + Lavaux。6 月日落 21:13，19:00 上山有充分天光。STP 100% 免費。</p>
+            <div class="tags"><span class="tag gold">STP 免費 CHF 14</span><span class="tag tip">疲倦可跳過</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">20:00<span class="dur">晚餐</span></div>
+          <div class="content">
+            <h4>Le Trois 主餐廳晚餐</h4>
+            <p>飯店附設精緻法式餐廳。Lavaux 葡萄酒 + 湖魚（Féra/Perche）+ 本地起司。或飯店酒吧輕食壽司+香檳。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stp-strip">
+      <span class="stp-label">D1 STP 節省</span>
+      <span class="stp-value">CHF 70+</span>
+      GVA→Vevey 火車 35 + Funi Mont Pèlerin 14 + Vevey 公交（如改早班還可加相機博物館 9 + Jenisch 12）
+    </div>
+
+    <div class="aging-strip">
+      <span class="label">🧬 抗老協議 D1</span>
+      時差重置：褪黑激素 0.3-1mg + 21:30 前入睡 + 避咖啡因。Vevey 385m 平緩海拔助深層睡眠。<strong>NMN 250-500mg</strong> 行前 7 天起每日早晨服用，校準 SIRT1 時鐘基因，Jetlag 縮短至 24-48h。
+    </div>
+
+    <div class="sec">
+      <h3>🏨 N1 飯店資訊</h3>
+      <div class="mini-card">
+        <div class="title">Hôtel des Trois Couronnes（1842）</div>
+        <div class="sub">5★ Swiss Deluxe · Lake View · 海拔 385m</div>
+        <p><strong>設施：</strong>Bain Bleu Spa（湖景泳池，D2 早晨 07:00-08:30 最佳）+ Le Trois 主餐廳 + Cigar Lounge + 湖畔大露台</p>
+        <p><strong>名人：</strong>雨果、Henry James、Dostoevsky、卓別林</p>
+        <p class="booking"><a href="https://www.hoteltroiscouronnes.ch/" target="_blank">官網直訂</a> · <a href="https://www.booking.com/searchresults.html?ss=Hotel+des+Trois+Couronnes+Vevey&aid={{BOOKING_AID}}&label=swiss2026_N1_vevey" target="_blank">Booking</a> / <a href="https://www.expedia.com/Hotel-Search?destination=Hotel+des+Trois+Couronnes+Vevey&siteid=1&affcid={{EXPEDIA_ID}}&clickref=swiss2026_N1_vevey" target="_blank">Expedia</a> · 房型：Lake View Junior Suite · 預估 CHF 600-900</p>
+      </div>
+    </div>
+
+    <div class="box warn">
+      <span class="label">⚠ 注意</span>
+      實際抵達已是台灣時間 6/3 凌晨，累計清醒 30+ 小時。<strong>不要硬撐 Funi Mont Pèlerin</strong>，太累就直接吃晚餐早睡。博物館（相機 / Jenisch）已關門無法進入，全部留 D2 早晨補（如選擇加碼 Alimentarium）。
+    </div>
+
+  </div>
+</article>
+
+<!-- ============ DAY 2 ============ -->
+<article id="d2" class="day-card">
+  <header class="day-head">
+    <div class="num">DAY 02 · 06.03 WED</div>
+    <h2>Lavaux UNESCO 葡萄園 → Rolle 1742 城堡</h2>
+    <div class="meta">
+      <strong>主軸：</strong>UNESCO 葡萄園輕裝縱走 + Lausanne 置物櫃策略<br>
+      <strong>住宿：</strong>Hostellerie du Château de Rolle · 1742<br>
+      <strong>海拔：</strong>385m → 410m 步道 → 375m
+    </div>
+  </header>
+  <div class="day-body">
+
+    <div class="quick-facts">
+      <div class="qf"><div class="label">步行</div><div class="value big">6.5km</div></div>
+      <div class="qf"><div class="label">行程時長</div><div class="value">8 hrs</div></div>
+      <div class="qf"><div class="label">STP 節省</div><div class="value">CHF 80</div></div>
+      <div class="qf"><div class="label">置物櫃</div><div class="value">Lausanne SBB</div></div>
+      <div class="qf"><div class="label">需訂位</div><div class="value">無</div></div>
+    </div>
+
+    <div class="sec">
+      <h3>🎒 行李策略</h3>
+      <div class="box">
+        <span class="label">Lausanne 置物櫃法</span>
+        <strong>Vevey → Lausanne 鎖箱 → 輕裝走 Lavaux → 回 Lausanne 取箱 → Rolle</strong>。SBB Schliessfächer 大型櫃 CHF 9 / 24h（容納 75×60×42cm 登機箱）。投幣 / 信用卡。比舊版「Rolle 先放再折返」省 1.5 小時。
+      </div>
+    </div>
+
+    <div class="sec">
+      <h3>⏱ 詳細時序</h3>
+      <ul class="tl">
+        <li>
+          <div class="time">08:00<span class="dur">早餐</span></div>
+          <div class="content">
+            <h4>Trois Couronnes 湖畔早餐</h4>
+            <p>Lavaux 產地優格 + Gruyère 起司 + 湖魚煙燻片。湖畔露台晨間反光。整理手提行李準備退房。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:30<span class="dur">退房</span></div>
+          <div class="content">
+            <h4>Trois Couronnes 退房</h4>
+            <p>攜手提行李，準備 Lausanne 置物櫃策略。</p>
+          </div>
+        </li>
+        <li class="optional">
+          <div class="time">10:00–11:00<span class="dur">加碼</span></div>
+          <div class="content">
+            <h4>【加碼】Alimentarium 雀巢食品博物館</h4>
+            <p>步行 6 分。1985 世界第一座食品博物館，前雀巢公司原址。<strong>STP 50% off CHF 7.50</strong>。如選此加碼，整日後移 1 小時。</p>
+            <div class="tags"><span class="tag tip">STP 50% off</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:45–10:00<span class="dur">S5 15分</span></div>
+          <div class="content">
+            <h4>Vevey → Lausanne 鎖箱</h4>
+            <p>S5 至 Lausanne。月台層 Schliessfächer 投幣鎖好登機箱。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">10:10–10:25<span class="dur">S5 15分</span></div>
+          <div class="content">
+            <h4>Lausanne → Cully（輕裝出發）</h4>
+            <p>Cully 是 Lavaux 中段最美起點。下車步行 3 分進入葡萄園步道。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">10:30–13:15<span class="dur">2h45 / 6.5km</span></div>
+          <div class="content">
+            <h4>Lavaux Panoramic Trail：Cully → Saint-Saphorin</h4>
+            <p>UNESCO 世界遺產（2007）。穿越 Riex、Epesses、Dézaley、Rivaz、Saint-Saphorin。沿途必停：① Dézaley Chasselas 頂級單一園觀景台 ② Cully 港口輕午餐 ③ Saint-Saphorin 12 世紀羅馬風教堂。輕裝 7kg 雙肩背包。</p>
+            <div class="tags"><span class="tag gold">UNESCO 葡萄梯田</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">13:30–13:45<span class="dur">S5 + 取箱</span></div>
+          <div class="content">
+            <h4>Saint-Saphorin → Lausanne 取箱</h4>
+            <p>月台層 Schliessfächer 取回登機箱。無摩擦轉 IR1。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li class="optional">
+          <div class="time">14:00–16:00<span class="dur">加碼 STP 免費</span></div>
+          <div class="content">
+            <h4>【加碼】Olympic Museum Lausanne</h4>
+            <p>Lausanne 站 M2 地鐵 2 站至 Ouchy-Olympique。世界唯一 IOC 官方博物館。<strong>STP 100% 免費 CHF 20</strong>。如加碼，Rolle 抵達延後至 16:45。</p>
+            <div class="tags"><span class="tag gold">STP 免費</span><span class="tag must">唯一 IOC 官方館</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:15–14:45<span class="dur">IR1</span></div>
+          <div class="content">
+            <h4>Lausanne → Rolle</h4>
+            <p>湖西西移至 La Côte 葡萄酒區核心。沿湖西岸經 Morges、Allaman。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:00<span class="dur">★ 入住</span></div>
+          <div class="content">
+            <h4>Hostellerie du Château de Rolle 入住</h4>
+            <p>1742 城堡側翼客棧。建議房型 <strong>Lake View Suite</strong>，湖畔陽台正對 Île de la Harpe 小島。</p>
+            <div class="tags"><span class="tag gold">1742 湖西最古旅店</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:30–17:00<span class="dur">90 分</span></div>
+          <div class="content">
+            <h4>Rolle 古城堡 + Île de la Harpe 湖中島</h4>
+            <p>1264 薩瓦伯爵建城堡（外觀免費）+ 1838 湖中方尖碑（La Côte 標誌）。晴天可見 Mont Blanc。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:30–18:30<span class="dur">酒莊</span></div>
+          <div class="content">
+            <h4>La Côte 酒莊試飲（可選）</h4>
+            <p>5km 內 20+ 家家族酒莊。建議 Domaine de Autecour 步行 15 分，試 Chasselas + Gamay 3 杯 ~CHF 25。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">19:30<span class="dur">晚餐</span></div>
+          <div class="content">
+            <h4>Hostellerie 城堡餐廳晚餐</h4>
+            <p>La Côte 產地：湖鱸魚 Filet de Perche、Gamay 紅酒燉牛頰、Tomme Vaudoise 起司。城堡外牆內側露台。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stp-strip">
+      <span class="stp-label">D2 STP 節省</span>
+      <span class="stp-value">CHF 80+</span>
+      Vevey-Lausanne-Cully-Saint-Saphorin-Lausanne-Rolle 區間車 28 + M2 地鐵 + 加碼 Olympic Museum CHF 20 + Alimentarium 50% off 7.50
+    </div>
+
+    <div class="aging-strip">
+      <span class="label">🧬 抗老協議 D2</span>
+      <strong>森林浴 + 紫外線 + Resveratrol</strong>：Lavaux α-pinene 吸入 2-3h，正午前 10 分前臂日曬補 D，晚餐 Chasselas 白酒 200ml。<strong>NMN 250mg 晨補 + 晨光暴露 10-15 分</strong>。
+    </div>
+
+    <div class="sec">
+      <h3>🏨 N2 飯店資訊</h3>
+      <div class="mini-card">
+        <div class="title">Hostellerie du Château de Rolle（1742）</div>
+        <div class="sub">4★ Historic Boutique · 海拔 375m</div>
+        <p><strong>設施：</strong>13c 城堡內庭 + 圖書館 + 城堡餐廳（湖畔露台）+ 飯店免費單車</p>
+        <p><strong>無 Spa</strong>——以文化 + 葡萄酒為主軸</p>
+        <p class="booking"><a href="https://www.hostellerie-chateau-rolle.ch/" target="_blank">官網直訂</a> · <a href="https://www.booking.com/searchresults.html?ss=Hostellerie+du+Chateau+de+Rolle&aid={{BOOKING_AID}}&label=swiss2026_N2_rolle" target="_blank">Booking</a> / <a href="https://www.expedia.com/Hotel-Search?destination=Hostellerie+du+Chateau+de+Rolle&siteid=1&affcid={{EXPEDIA_ID}}&clickref=swiss2026_N2_rolle" target="_blank">Expedia</a> · 預估 CHF 450-650</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<!-- ============ DAY 3 ============ -->
+<article id="d3" class="day-card">
+  <header class="day-head gold">
+    <div class="num">DAY 03 · 06.04 THU · ★ 山內唯一夜</div>
+    <h2>Rolle → Mürren 1,638m + Schilthorn 2,970m Funifor 首航</h2>
+    <div class="meta">
+      <strong>主軸：</strong>跨瑞士 4h15 + Allmendhubel 1912 古纜車 + Schilthorn 攻頂<br>
+      <strong>住宿：</strong>Hotel Mürren Palace · 1874 Belle Époque（2023 重啟）<br>
+      <strong>海拔：</strong>375m → 1,638m（睡眠）→ 2,970m（白天最高點）
+    </div>
+  </header>
+  <div class="day-body">
+
+    <div class="quick-facts">
+      <div class="qf"><div class="label">跨城時長</div><div class="value">4h15</div></div>
+      <div class="qf"><div class="label">白天最高點</div><div class="value big">2,970m</div></div>
+      <div class="qf"><div class="label">睡眠海拔</div><div class="value big">1,638m</div></div>
+      <div class="qf"><div class="label">STP 節省</div><div class="value">CHF 100+</div></div>
+      <div class="qf"><div class="label">需訂位</div><div class="value">無</div></div>
+    </div>
+
+    <div class="box gold">
+      <span class="label">⚠ 兩個跨夜置物櫃</span>
+      <strong>D3 路過 Interlaken Ost 時將登機箱跨夜寄存（CHF 10×2 = 20）</strong>，D3-D4 兩日全程輕裝（雙肩包：1 套換洗 + 3C + 護照卡 + 盥洗 + 保暖層 + 1.5L 水）。D4 下山經 Interlaken Ost 取箱。
+    </div>
+
+    <div class="sec">
+      <h3>⏱ 詳細時序</h3>
+      <ul class="tl">
+        <li>
+          <div class="time">07:30<span class="dur">早餐 + 退房</span></div>
+          <div class="content">
+            <h4>Hostellerie du Château 早餐 + 退房</h4>
+            <p>城堡內側露台早餐。輕裝雙肩包出發。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">08:34–08:52<span class="dur">S5 18分</span></div>
+          <div class="content">
+            <h4>Rolle → Lausanne（避開 Geneva 倒流）</h4>
+            <p>東向 S5 區間車，比舊版省 45 分。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:09–10:23<span class="dur">IC1 1h10</span></div>
+          <div class="content">
+            <h4>Lausanne → Bern（IC1）</h4>
+            <p>每小時 09 分發車。一等艙 1 排 3 座 + 小桌 + 插座。沿途 Fribourg、Mittelland 高原。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">10:34–11:29<span class="dur">IR 55分</span></div>
+          <div class="content">
+            <h4>Bern → Interlaken Ost</h4>
+            <p>穿越 Thunersee 圖恩湖畔，景觀進入伯恩高地。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">11:29–11:35<span class="dur">⚡ 跨夜寄存</span></div>
+          <div class="content">
+            <h4>★ Interlaken Ost 跨夜置物櫃</h4>
+            <p>月台後立刻去 Schliessfächer（Lake Brienz 出口前方）寄存登機箱 72 小時。投幣 / 信用卡 CHF 10/24h。</p>
+            <div class="tags"><span class="tag gold">D3-D4 全程輕裝</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">11:35–11:55<span class="dur">BOB 20分</span></div>
+          <div class="content">
+            <h4>Interlaken Ost → Lauterbrunnen</h4>
+            <p>月台對面換 BOB。經 Wilderswil → Zweilütschinen 分岔。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">12:05–12:15<span class="dur">Bus 141</span></div>
+          <div class="content">
+            <h4>Lauterbrunnen → Stechelberg（PostBus）</h4>
+            <p>BLM 鐵道 4/13-7/10 歲修，這是 Mürren 唯一路徑。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">12:25–12:40<span class="dur">Schilthornbahn 20XX</span></div>
+          <div class="content">
+            <h4>Stechelberg → Mürren（2026/4 全新啟用）</h4>
+            <p>耗資破億 Funifor 雙軌寬距纜車。15 分爬升 770m。車廂內看艾格、僧侶、少女三山連線。</p>
+            <div class="tags"><span class="tag must">2026/4 全新</span><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">12:45–13:15<span class="dur">快速入住</span></div>
+          <div class="content">
+            <h4>Hotel Mürren Palace 入住 + Valser 補水</h4>
+            <p>下纜車步行 3 分。寄存行李、領鑰匙、村內 Coop 買 1L Valser（Mg²⁺ 95mg/L）。<strong>Hyper-hydration 慢飲 500-800ml</strong>。輕午餐避油膩。</p>
+            <div class="tags"><span class="tag tip">抗老協議 2 Valser</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">13:20–14:05<span class="dur">⭐ 秘境</span></div>
+          <div class="content">
+            <h4>★ Allmendhubel 1912 古纜車 + 6 月花徑</h4>
+            <p>飯店步行 3 分至山下站。1912 funicular 4 分上 1,907m。30 分 Flower Trail 環圈，150 種高山花標牌（龍膽、火絨草、報春花）。Mountain View Restaurant 露台。</p>
+            <div class="tags"><span class="tag gold">1912 古纜車</span><span class="tag tip">STP 50% off CHF 8</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:10–14:22<span class="dur">12 分</span></div>
+          <div class="content">
+            <h4>Schilthornbahn：Mürren → Birg → Schilthorn</h4>
+            <p>Funifor 雙軌，舊系統 20.4 分壓縮至 11.8 分。Birg 中繼站短停換車。</p>
+            <div class="tags"><span class="tag must">Schilthornbahn 20XX 首航</span><span class="tag tip">STP 50% off</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:30–16:00<span class="dur">90 分</span></div>
+          <div class="content">
+            <h4>Piz Gloria 360° 旋轉餐廳 + 山頂</h4>
+            <p>2,970m。世界第一座 360° 旋轉景觀餐廳（1969 龐德《女王密令》興建）。55 分旋轉一圈，看艾格、僧侶、少女、白朗峰等 200+ 座山峰。</p>
+            <div class="tags"><span class="tag must">⚠ AMS 風險</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">16:00–17:00<span class="dur">60 分</span></div>
+          <div class="content">
+            <h4>Birg Skyline Walk 戰慄玻璃步道（2,677m）</h4>
+            <p>下到 Birg。沿著 200m 鋼索玻璃步道懸吊於峭壁外，玻璃地板 + 鐵網 + 爬行段。垂直落差 800m。</p>
+            <div class="tags"><span class="tag gold">必體驗</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:10–17:20<span class="dur">下山</span></div>
+          <div class="content">
+            <h4>Birg → Mürren</h4>
+            <p>Schilthornbahn 20XX 一路下回 Mürren。單日垂直曝露 2,595m（375m→2,970m→1,638m）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:30–18:30<span class="dur">Spa</span></div>
+          <div class="content">
+            <h4>Mürren Palace 2023 Spa（高山攻頂後恢復）</h4>
+            <p>20m 室內泳池正面少女峰 + 桑拿 + 土耳其浴。住客免費。攻頂後一進門就 Spa = 最高 ROI 使用。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">19:30<span class="dur">晚餐</span></div>
+          <div class="content">
+            <h4>Mürren Palace 主餐廳 + 20:30 Alpenglow</h4>
+            <p>瓦萊州傳統食材 + 法式技法。<strong>20:30 達 Alpenglow——少女峰山頂夕陽染紅</strong>，南向窗一邊用餐一邊觀賞。半膳含早餐 CHF 95-120/人。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stp-strip">
+      <span class="stp-label">D3 STP 節省</span>
+      <span class="stp-value">CHF 100+</span>
+      跨城火車 95 + Schilthornbahn 50% off CHF 54 + Allmendhubel 50% off CHF 8（總原價 ~CHF 200）
+    </div>
+
+    <div class="aging-strip">
+      <span class="label">🧬 抗老協議 D3</span>
+      <strong>中度缺氧 × 粒線體誘導 × Hyper-hydration</strong>：Schilthorn 2,970m 停留 60-90 分，Piz Gloria 用餐刺激低氧消化。<strong>Valser 鎂水 500-800ml 上山前 + 山上每 30 分小口飲</strong>。1,638m 山內適應夜，預備 D4 Jungfraujoch 3,454m 攻頂。
+    </div>
+
+    <div class="sec">
+      <h3>🏨 N3 飯店資訊（★ 山內唯一夜）</h3>
+      <div class="mini-card">
+        <div class="title">Hotel Mürren Palace（1874 / 2023 重啟）</div>
+        <div class="sub">5★ Belle Époque · 海拔 1,638m · Hauser-Schild 家族原創</div>
+        <p><strong>Spa：</strong>2023 翻修，20m 泳池正面少女峰 + 桑拿 + 土耳其浴。<strong>17:30 攻頂後黃金恢復窗</strong>。</p>
+        <p><strong>陽台：</strong>南向 Three Peaks Suite 直擊 Eiger 3,967m + Mönch 4,107m + Jungfrau 4,158m。<strong>D4 早 06:00 Alpenglow</strong>陽台獨享。</p>
+        <p class="booking"><a href="https://www.murrenpalace.com/" target="_blank">官網直訂</a> · <a href="https://www.booking.com/searchresults.html?ss=Hotel+Murren+Palace&aid={{BOOKING_AID}}&label=swiss2026_N3_murren" target="_blank">Booking</a> / <a href="https://www.expedia.com/Hotel-Search?destination=Hotel+Murren+Palace&siteid=1&affcid={{EXPEDIA_ID}}&clickref=swiss2026_N3_murren" target="_blank">Expedia</a> · 房型：Three Peaks Suite / Junior Suite Eiger View · 預估 CHF 800-1,200</p>
+      </div>
+    </div>
+
+    <div class="box warn">
+      <span class="label">⚠ 下午高山天氣風險</span>
+      下午 13:00-16:00 是阿爾卑斯對流雲與雷陣雨高發時段。出發前晚 22:00 查 schilthorn.ch 山頂網路攝影機 + MeteoSwiss。若 D3 午後山頂雲封，<strong>不要硬上</strong>：改為 Mürren / Birg 短拍 + 早睡；D4 早晨優先 Jungfraujoch，Schilthorn 移到 D4 上午備用。
+    </div>
+
+  </div>
+</article>
+
+<!-- ============ DAY 4 ============ -->
+<article id="d4" class="day-card">
+  <header class="day-head">
+    <div class="num">DAY 04 · 06.05 FRI</div>
+    <h2>Jungfraujoch 3,454m → Giessbach 14 層瀑布</h2>
+    <div class="meta">
+      <strong>主軸：</strong>歐洲最高鐵道清晨攻頂 + BLS 湖船 + 1879 古纜車 + Belle Époque<br>
+      <strong>住宿：</strong>Grandhotel Giessbach · 1875 Belle Époque（瀑布頂端）<br>
+      <strong>海拔：</strong>1,638m → 3,454m → ~700m
+    </div>
+  </header>
+  <div class="day-body">
+
+    <div class="quick-facts">
+      <div class="qf"><div class="label">白天最高點</div><div class="value big">3,454m</div></div>
+      <div class="qf"><div class="label">行程時長</div><div class="value">10 hrs</div></div>
+      <div class="qf"><div class="label">STP 節省</div><div class="value">CHF 95</div></div>
+      <div class="qf"><div class="label">需訂位</div><div class="value big" style="color:var(--swiss);">★ Jungfraujoch</div></div>
+      <div class="qf"><div class="label">訂位費</div><div class="value">CHF 10</div></div>
+    </div>
+
+    <div class="box warn">
+      <span class="label">⚠ 14 天前必訂（5/22 截止）</span>
+      <strong>Jungfraujoch 強制訂位</strong>於 jungfrau.ch 預訂 D4 6/5 08:02 KS→Jungfraujoch 班次。CHF 10/人。行前 14 天看天氣預報後再下訂。
+    </div>
+
+    <div class="sec">
+      <h3>⏱ 詳細時序</h3>
+      <ul class="tl">
+        <li>
+          <div class="time">06:30<span class="dur">早餐 + 補水</span></div>
+          <div class="content">
+            <h4>Mürren Palace 晨間早餐 + Valser 補水</h4>
+            <p>飯店請廚房準備早餐盒（火車上吃）。<strong>06:00 Alpenglow</strong>陽台獨享。<strong>500ml Valser 鎂水 + 攜帶 500ml 上山</strong>。輕裝雙肩包下山。</p>
+            <div class="tags"><span class="tag tip">抗老協議 2 晨間鎂水</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">07:30–07:55<span class="dur">25 分</span></div>
+          <div class="content">
+            <h4>Schilthornbahn 下 + Bus 141 接 Lauterbrunnen</h4>
+            <p>下 Stechelberg 15 分 + PostBus 10 分。輕裝雙肩包，登機箱在 Interlaken Ost 等。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">08:05–08:55<span class="dur">WAB 齒軌 50 分</span></div>
+          <div class="content">
+            <h4>Lauterbrunnen → Kleine Scheidegg（WAB）</h4>
+            <p>1893 齒軌列車經 Wengen → Wengernalp → Kleine Scheidegg。50 分垂直爬升 1,265m。<strong>右側座位</strong>看艾格北壁逼近。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:02–09:53<span class="dur">Jungfraubahn</span></div>
+          <div class="content">
+            <h4>★ KS → Jungfraujoch（1912 歐洲最高鐵道）</h4>
+            <p>從 KS 進入艾格與僧侶峰岩體內隧道，中途 Eismeer 冰海觀景站停 5 分。</p>
+            <div class="tags"><span class="tag must">CHF 10 訂位</span><span class="tag tip">STP 25% off</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">10:00–12:00<span class="dur">2 hrs · 最高點</span></div>
+          <div class="content">
+            <h4>Top of Europe：Sphinx + Plateau + Ice Palace</h4>
+            <p>Sphinx 3,571m + 阿萊奇冰川（UNESCO 22km 歐洲最長冰川）+ Ice Palace 冰雕藝廊 + Plateau 雪原（視風況）。</p>
+            <div class="tags"><span class="tag must">⚠ 嚴重 AMS 風險</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">12:00–13:30<span class="dur">下山 90 分</span></div>
+          <div class="content">
+            <h4>Jungfraujoch → KS → Lauterbrunnen 反向</h4>
+            <p>下山速度更快。途中 KS 月台短暫補水、廁所。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">13:30–14:00<span class="dur">午餐</span></div>
+          <div class="content">
+            <h4>Lauterbrunnen 快速午餐</h4>
+            <p>站旁 Coop Pronto 採購 BOB 車上輕食，或 Restaurant Hirschen Café 簡餐。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:10–14:30<span class="dur">BOB</span></div>
+          <div class="content">
+            <h4>Lauterbrunnen → Interlaken Ost</h4>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:30–14:40<span class="dur">🔓 取行李</span></div>
+          <div class="content">
+            <h4>★ Interlaken Ost 取回登機箱</h4>
+            <p>月台後立刻走至 Schliessfächer 取出 D3 寄存。刷同張卡開櫃。</p>
+            <div class="tags"><span class="tag gold">跨夜置物櫃完成</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:45–15:35<span class="dur">BLS 50 分</span></div>
+          <div class="content">
+            <h4>Interlaken Ost → Giessbach（BLS 湖船直達）</h4>
+            <p>沿 Brienzersee 南岸航行，看冰川岩粉散射綠松色 + Brienzer Rothorn。<strong>夏季部分班次為 1914 蒸汽明輪 DS Lötschberg</strong>。中停 Iseltwald（《愛的迫降》劇照地）。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span><span class="tag gold">DS Lötschberg</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:35–15:42<span class="dur">⭐ 1879 古纜車</span></div>
+          <div class="content">
+            <h4>★ Giessbachbahn 1879 私人纜車登山</h4>
+            <p><strong>瑞士現存最古老纜車</strong>、世界最古老仍營運水力 funicular。340m 軌道、爬升 95m，3-4 分將你升至飯店大廳。住客全程免費；STP 免費。</p>
+            <div class="tags"><span class="tag gold">1879 瑞士最古纜車</span><span class="tag ok">STP 免費</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:45<span class="dur">★ 入住</span></div>
+          <div class="content">
+            <h4>Grandhotel Giessbach 入住（瀑布頂端 1875 Belle Époque）</h4>
+            <p>建議 <strong>Lake View Junior Suite</strong>——湖畔陽台直擊 Brienzersee + 14 層瀑布側視。</p>
+            <div class="tags"><span class="tag gold">Belle Époque 三巨頭</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">16:00–17:00<span class="dur">Spa</span></div>
+          <div class="content">
+            <h4>Giessbach Spa（Jungfraujoch 下山後恢復）</h4>
+            <p>桑拿 + 土耳其浴 + Hammam + indoor pool 正面湖景。住客免費。<strong>3,454m 下山後最佳恢復窗</strong>。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:00–18:30<span class="dur">抗老協議 3</span></div>
+          <div class="content">
+            <h4>★ 14 層瀑布 + BAT 冷暴露 + Wim Hof 協議</h4>
+            <p>飯店外即 14 段瀑布（總落差 500m）。步道貫穿水簾後 + 上方木橋 + 中段觀景台。</p>
+            <ul style="margin:8px 0 0 16px;font-size:12px;line-height:1.8;">
+              <li>17:00-17:30 瀑布步道（飯店步行 5 分至中段）</li>
+              <li>17:30-17:45 岸上 Wim Hof 3 輪（30 次深呼吸 + 屏息 30s + 4 次深吸氣）</li>
+              <li>17:45-17:50 10-14°C 瀑布水池浸足 5 分鐘</li>
+              <li>17:50-18:00 4-7-8 呼吸 3 輪收尾</li>
+              <li>18:00-18:30 漫步回飯店，30 分內進熱餐</li>
+            </ul>
+            <div class="tags"><span class="tag gold">抗老協議 3 升級版</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">19:30<span class="dur">★ 米其林指南</span></div>
+          <div class="content">
+            <h4>Le Tapis Rouge 主餐廳晚餐</h4>
+            <p>1875 Belle Époque 大廳改建。Bernese Oberland 食材 + 法式技法。Brienz 湖魚 Felchen + Lavaux Chasselas。<strong>Tasting menu CHF 145 / 5 道</strong>。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">21:00+<span class="dur">★ 私享</span></div>
+          <div class="content">
+            <h4>21:00 後私享瀑布時段</h4>
+            <p>晚餐後步道對公眾關閉，<strong>僅住客可進出</strong>。月光下 14 層瀑布是 Grandhotel Giessbach 最珍貴的私享時刻。</p>
+            <div class="tags"><span class="tag must">住客限定</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stp-strip">
+      <span class="stp-label">D4 STP 節省</span>
+      <span class="stp-value">CHF 95+</span>
+      Mürren-Lauterbrunnen-KS WAB + Interlaken BOB + BLS 湖船 + Giessbachbahn 全免（CHF 50+）+ Jungfraujoch 25% off CHF 83
+    </div>
+
+    <div class="aging-strip">
+      <span class="label">🧬 抗老協議 D4</span>
+      <strong>最大缺氧負荷 × 下撤 × BAT + Wim Hof</strong>：Jungfraujoch 3,454m 停留 ≤90 分鐘 + 抗 UV 墨鏡保護黃斑部。下午下撤至 Giessbach 700m，<strong>瀑布水池 Wim Hof 升級協議</strong>強制副交感切換。
+    </div>
+
+    <div class="sec">
+      <h3>🏨 N4 飯店資訊</h3>
+      <div class="mini-card">
+        <div class="title">Grandhotel Giessbach（1875）</div>
+        <div class="sub">5★ Belle Époque · 瀑布頂端 · 海拔 ~700m · Stiftung 基金會非營利</div>
+        <p><strong>1879 Giessbachbahn</strong>——瑞士最古纜車，住客全程免費</p>
+        <p><strong>14 層瀑布</strong>——19:00 後僅住客可進出</p>
+        <p><strong>Le Tapis Rouge</strong>米其林指南 + Belle Époque Spa</p>
+        <p><strong>歷史</strong>：Mendelssohn 1847、Mark Twain、John Ruskin 都來過</p>
+        <p class="booking"><a href="https://giessbach.ch/" target="_blank">官網直訂</a> · <a href="https://www.booking.com/searchresults.html?ss=Grandhotel+Giessbach&aid={{BOOKING_AID}}&label=swiss2026_N4_giessbach" target="_blank">Booking</a> / <a href="https://www.expedia.com/Hotel-Search?destination=Grandhotel+Giessbach&siteid=1&affcid={{EXPEDIA_ID}}&clickref=swiss2026_N4_giessbach" target="_blank">Expedia</a> · 預估 CHF 280-450（基金會佛心價）</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<!-- ============ DAY 5 ============ -->
+<article id="d5" class="day-card">
+  <header class="day-head">
+    <div class="num">DAY 05 · 06.06 SAT</div>
+    <h2>Giessbach → Verkehrshaus → Lucerne 山丘 Art Nouveau</h2>
+    <div class="meta">
+      <strong>主軸：</strong>住客瀑布晨光 + 雙古纜車（1879 → 1910）+ Verkehrshaus 100% 免費<br>
+      <strong>住宿：</strong>Hotel Montana Luzern · 1910 Jugendstil<br>
+      <strong>海拔：</strong>~700m → 436m → ~530m
+    </div>
+  </header>
+  <div class="day-body">
+
+    <div class="quick-facts">
+      <div class="qf"><div class="label">行程時長</div><div class="value">10 hrs</div></div>
+      <div class="qf"><div class="label">最大景點</div><div class="value">Verkehrshaus</div></div>
+      <div class="qf"><div class="label">STP 節省</div><div class="value big">CHF 127</div></div>
+      <div class="qf"><div class="label">古纜車</div><div class="value">1879 + 1910</div></div>
+      <div class="qf"><div class="label">需訂位</div><div class="value">無</div></div>
+    </div>
+
+    <div class="sec">
+      <h3>⏱ 詳細時序</h3>
+      <ul class="tl">
+        <li>
+          <div class="time">06:30–07:30<span class="dur">⭐ 住客獨享</span></div>
+          <div class="content">
+            <h4>★ Giessbach 瀑布晨光 + Brienzersee 紅光 PBM</h4>
+            <p>住客早起獨享——D4 晚 19:00 後步道對公眾關閉。06:30 步道才剛開放、零觀光客 1 小時。</p>
+            <ul style="margin:6px 0 0 16px;font-size:12px;line-height:1.7;">
+              <li>06:30 瀑布上方木橋拍晨光照射 14 層</li>
+              <li>07:00 瀑布中段「水簾後步道」</li>
+              <li>07:15 Brienzersee 湖畔紅光凝視 + 浸足 5 分</li>
+              <li>07:30 回飯店</li>
+            </ul>
+            <div class="tags"><span class="tag gold">抗老協議 1+3 同步</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">08:00<span class="dur">早餐</span></div>
+          <div class="content">
+            <h4>Le Tapis Rouge 1875 大廳早餐</h4>
+            <p>水晶吊燈下看 Brienzersee 晨霧。Berner Oberland 起司 + Bircher Müesli + 飯店園區自產蜂蜜。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:30<span class="dur">退房</span></div>
+          <div class="content">
+            <h4>Grandhotel Giessbach 退房</h4>
+            <p>手提箱自帶。輕裝結束（跨夜寄存策略結束）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:40–09:45<span class="dur">1879 funicular</span></div>
+          <div class="content">
+            <h4>Giessbachbahn 1879 下山 → 碼頭</h4>
+            <p>飯店大廳直接搭 funicular 下 4-5 分。住客最後一次免費搭乘儀式。</p>
+            <div class="tags"><span class="tag gold">瑞士最古纜車</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">10:48–11:35<span class="dur">BLS 湖船</span></div>
+          <div class="content">
+            <h4>BLS 湖船：Giessbach → Interlaken Ost</h4>
+            <p>夏季每 1.5h 一班。沿湖南岸西航經 Iseltwald、Ringgenberg。panoramic 玻璃 + 甲板開放。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">12:04–13:58<span class="dur">IR 1h54</span></div>
+          <div class="content">
+            <h4>Interlaken Ost → Lucerne（Luzern-Interlaken Express）</h4>
+            <p>每小時 04 分發車。<strong>Brünig Pass 齒軌段</strong>最高點 1,008m。沿途湖泊 Lungerersee、Sarnersee、Alpnachersee。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span><span class="tag gold">瑞士最美風景線</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">13:58–14:15<span class="dur">17 分</span></div>
+          <div class="content">
+            <h4>Lucerne HB → Hotel Montana Drahtseilbahn 山下站</h4>
+            <p>步行 8 分 Haldenstrasse 或 Bus 6/8 八分。</p>
+            <div class="tags"><span class="tag ok">STP 含市內公交</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:20–14:30<span class="dur">寄行李</span></div>
+          <div class="content">
+            <h4>Hotel Montana 快速行李寄存（暫不入房）</h4>
+            <p>Drahtseilbahn 上山，front desk 寄放手提行李即可，立刻下樓 Verkehrshaus。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:30–16:30<span class="dur">⭐ STP 免費</span></div>
+          <div class="content">
+            <h4>★ Verkehrshaus 瑞士交通博物館</h4>
+            <p>下 Drahtseilbahn 步行 5 分至 Schweizerhofquai → Bus 6/8 八分。歐洲最大交通博物館（1959）。展品涵蓋瑞士鐵道齒軌、纜車、湖船、汽車、航空、太空。<strong>還原 1871 Rigi Bahn 原始機車頭、DS Rigi 1848 蒸汽船殘骸</strong>——D6 你會搭過真實 Rigi Bahn。<strong>STP 100% 免費 CHF 35</strong>。</p>
+            <div class="tags"><span class="tag gold">STP 免費 CHF 35</span><span class="tag must">歐洲最大交通博物館</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">16:45<span class="dur">★ 入住</span></div>
+          <div class="content">
+            <h4>1910 Drahtseilbahn 上山 + Hotel Montana 入住</h4>
+            <p>Bus 6/8 回 Schweizerhofquai → 步行 5 分回 Drahtseilbahn 山下站 → <strong>1910 私人纜車</strong>上山。建議 <strong>Lake View Junior Suite</strong>——面 Mt. Pilatus + 琉森湖。</p>
+            <div class="tags"><span class="tag gold">1910 私人纜車</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:00–19:00<span class="dur">2 hrs</span></div>
+          <div class="content">
+            <h4>Hotel Montana 露台 + Lucerne 舊城短暫俯瞰</h4>
+            <p>Drei-Linden Terrace 拍 Lucerne 全景。亦可短暫下山步行 12 分至舊城。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">19:30–20:00<span class="dur">⭐ 抗老協議</span></div>
+          <div class="content">
+            <h4>★ Natural PBM 紅光凝視協議（Drei-Linden 露台）</h4>
+            <p>6 月日落 21:13，19:30-20:00 為日落前 75-100 分黃金紅光時段。<strong>無墨鏡軟視角凝視湖面 15 分 + 前臂皮膚暴露 5-10 分 + 4-7-8 呼吸</strong>。促視網膜 OPN3 + 皮膚 cytochrome c oxidase + 夜間褪黑激素。</p>
+            <div class="tags"><span class="tag gold">抗老協議 1 Natural PBM</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">20:15<span class="dur">晚餐</span></div>
+          <div class="content">
+            <h4>SCALA Ristorante 晚餐（Gault Millau 17 分）</h4>
+            <p>飯店附設米其林指南。主廚 Roman Erni 義法地中海料理。玻璃帷幕用餐區俯瞰琉森燈火。Art Nouveau 雕花石膏天花瑞士境內最完整之一。</p>
+            <div class="tags"><span class="tag gold">Gault Millau 17</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stp-strip">
+      <span class="stp-label">D5 STP 節省</span>
+      <span class="stp-value">CHF 127+</span>
+      Giessbachbahn 9 + BLS 湖船 + Brünig IR 80 + Verkehrshaus CHF 35 + Lucerne Bus（總原價 ~CHF 165）
+    </div>
+
+    <div class="aging-strip">
+      <span class="label">🧬 抗老協議 D5</span>
+      <strong>水域恢復 × 副交感深化 × Natural PBM</strong>：Lake Brienz 蒸汽船湖面負離子；Drei-Linden 露台 19:30-20:00 PBM 紅光凝視——對應你診所 PBM 紅光臨床概念的自然版。
+    </div>
+
+    <div class="sec">
+      <h3>🏨 N5 飯店資訊</h3>
+      <div class="mini-card">
+        <div class="title">Hotel Montana Luzern（1910）</div>
+        <div class="sub">4★ Jugendstil / Art Nouveau · 海拔 ~530m · Reuter 家族 3 代</div>
+        <p><strong>1910 Drahtseilbahn</strong> 私人纜車（住客全程免費）</p>
+        <p><strong>SCALA Ristorante</strong> Gault Millau 17 + Wellness Spa + Drei-Linden 露台</p>
+        <p><strong>歷史</strong>：Sophia Loren、Audrey Hepburn 曾下榻</p>
+        <p class="booking"><a href="https://www.hotel-montana.ch/" target="_blank">官網直訂</a> · <a href="https://www.booking.com/searchresults.html?ss=Hotel+Montana+Luzern&aid={{BOOKING_AID}}&label=swiss2026_N5_montana" target="_blank">Booking</a> / <a href="https://www.expedia.com/Hotel-Search?destination=Hotel+Montana+Luzern&siteid=1&affcid={{EXPEDIA_ID}}&clickref=swiss2026_N5_montana" target="_blank">Expedia</a> · 預估 CHF 450-700</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<!-- ============ DAY 6 ============ -->
+<article id="d6" class="day-card">
+  <header class="day-head gold">
+    <div class="num">DAY 06 · 06.07 SUN · 5 種瑞士機械</div>
+    <h2>Mt. Rigi 1871 + Bürgenstock 1905 古電梯 → Schweizerhof</h2>
+    <div class="meta">
+      <strong>主軸：</strong>瑞士 19-20 世紀初機械史 5 連發 + 琉森山丘換湖畔<br>
+      <strong>住宿：</strong>Grand Hotel Schweizerhof Lucerne · 1845 Belle Époque<br>
+      <strong>海拔：</strong>~530m → 1,797m（Rigi 山頂）→ 1,128m（Hammetschwand）→ 436m
+    </div>
+  </header>
+  <div class="day-body">
+
+    <div class="quick-facts">
+      <div class="qf"><div class="label">行程時長</div><div class="value">12 hrs</div></div>
+      <div class="qf"><div class="label">古纜車 / 電梯</div><div class="value big">5 種</div></div>
+      <div class="qf"><div class="label">STP 節省</div><div class="value big">CHF 210</div></div>
+      <div class="qf"><div class="label">最高點</div><div class="value">1,797m Rigi</div></div>
+      <div class="qf"><div class="label">需訂位</div><div class="value">無</div></div>
+    </div>
+
+    <div class="sec">
+      <h3>⏱ 詳細時序</h3>
+      <ul class="tl">
+        <li>
+          <div class="time">06:00–06:30<span class="dur">⭐ 抗老協議</span></div>
+          <div class="content">
+            <h4>★ Lake Lucerne 晨光 PBM + 冷水浸足</h4>
+            <p>06:00 日出後 30 分黃金晨光。從 Hotel Montana 露台看湖面或下山 Schweizerhofquai 湖畔：</p>
+            <ul style="margin:6px 0 0 16px;font-size:12px;line-height:1.7;">
+              <li>無墨鏡 15 分晨光紅光凝視</li>
+              <li>湖邊冷水浸足 5 分（11-14°C，配 Wim Hof 簡化版）</li>
+              <li>NMN 250mg + 早餐前服</li>
+            </ul>
+            <div class="tags"><span class="tag gold">三協議同步</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">07:30<span class="dur">早餐 + 退房</span></div>
+          <div class="content">
+            <h4>Hotel Montana 露台早餐</h4>
+            <p>山丘露台早餐看晨霧緩升。退房後寄放手提箱於飯店或下山 Lucerne HB 置物櫃。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:00<span class="dur">下山</span></div>
+          <div class="content">
+            <h4>Drahtseilbahn 下山 → Lucerne Pier 1</h4>
+            <p>1910 私人 funicular 1.5 分 + Bus 2 / 步行至 Pier 1。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:12–10:07<span class="dur">SGV 55 分</span></div>
+          <div class="content">
+            <h4>SGV 湖船：Lucerne → Vitznau</h4>
+            <p>琉森湖 Vierwaldstättersee。船航沿北岸經 Hertenstein、Weggis 至 Vitznau。<strong>週日 SGV 排班可能含 1908 蒸汽明輪 DS Schiller 或 DS Gallia</strong>。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span><span class="tag gold">蒸汽明輪</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">10:15–10:45<span class="dur">⭐ 1871 齒軌</span></div>
+          <div class="content">
+            <h4>★ Vitznau → Rigi Kulm（1871 歐洲第一齒軌）</h4>
+            <p>1871 通車，<strong>歐洲第一條齒軌鐵道</strong>。全長 6.85km，垂直爬升 1,362m，最大坡度 25%。<strong>STP 100% 免費 CHF 78</strong>——本案 STP 最直接的免費利用場景。</p>
+            <div class="tags"><span class="tag gold">★ STP 100% 免費 CHF 78</span><span class="tag must">歐洲第一齒軌</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">10:45–13:00<span class="dur">2h15</span></div>
+          <div class="content">
+            <h4>Rigi Kulm 1,797m 山頂全景 + 山頂午餐</h4>
+            <p>「山中之王 Königin der Berge」。360° 可見琉森湖、Zugersee、Lauerzersee 三湖 + 艾格、僧侶、少女連線（晴天）。馬克吐溫 1880《A Tramp Abroad》盛讚。Hotel Rigi Kulm（1816 創立，瑞士最古山頂飯店之一）Bistro 輕午餐。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">13:15–13:45<span class="dur">下山</span></div>
+          <div class="content">
+            <h4>Rigi Kulm → Vitznau（齒軌反向）</h4>
+            <p>下山左側座位看 Pilatus + 琉森湖逐漸放大。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:08–15:03<span class="dur">SGV</span></div>
+          <div class="content">
+            <h4>SGV 湖船：Vitznau → Lucerne Pier 1</h4>
+            <p>下午光線正好（西曬）。甲板拍 Pilatus 山金光 + 琉森舊城屋頂。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:15–15:40<span class="dur">⭐ 秘境</span></div>
+          <div class="content">
+            <h4>★ SGV 續航：Pier 1 → Kehrsiten Bürgenstock</h4>
+            <p>同月台轉乘下一班 SGV 25 分至 Kehrsiten。沿湖船看 Mt. Pilatus 南向視角。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:45–15:52<span class="dur">1888 funicular</span></div>
+          <div class="content">
+            <h4>★ Bürgenstock-Bahn 1888 私人 funicular</h4>
+            <p>1888 啟用（與 Gütsch 同年）。928m 軌道、爬升 440m、7 分至 Bürgenstock 870m 度假村。<strong>STP 100% 涵蓋</strong>。</p>
+            <div class="tags"><span class="tag gold">1888 funicular</span><span class="tag ok">STP 免費</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:55–16:30<span class="dur">Felsenweg 1.5km</span></div>
+          <div class="content">
+            <h4>★ Felsenweg 懸崖步道</h4>
+            <p>1905 沿垂直岩壁外側鑿出的人工觀景步道，部分懸在 800m 高度湖面上。沿途多個觀景平台俯瞰 Lake Lucerne + Mt. Rigi + Pilatus + Bürgenstock Hotels（1873——奧黛麗赫本 1954 婚禮地）。</p>
+            <div class="tags"><span class="tag gold">1905 工程奇觀</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">16:30–17:00<span class="dur">⭐ 1905 古電梯</span></div>
+          <div class="content">
+            <h4>★ Hammetschwand Lift 1905（歐洲最古外露電梯）</h4>
+            <p>1905 啟用，<strong>152m 高度，1 分鐘垂直爬升到 1,128m 山頂觀景台</strong>。當時歐洲最高露天電梯。<strong>玻璃廂體完全暴露在 152m 懸崖外</strong>。山頂 360° 看 Rigi、Pilatus、Bürgenstock 山脊、Schwyz/Uri 兩州、晴天 Eiger/Mönch/Jungfrau 三山。<strong>CHF 11 單程（STP 不涵蓋）</strong>。</p>
+            <div class="tags"><span class="tag gold">1905 歐洲最古外露電梯</span><span class="tag must">152m 垂直</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:00–17:25<span class="dur">下山</span></div>
+          <div class="content">
+            <h4>Hammetschwand → funicular 山上站 → 1888 下山</h4>
+            <p>反向 Felsenweg 至 Bürgenstock-Bahn 山上站。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">17:35–18:00<span class="dur">SGV 回</span></div>
+          <div class="content">
+            <h4>SGV：Kehrsiten → Lucerne Pier 1</h4>
+            <p>傍晚光線正好（西曬）。甲板再次拍 Mt. Pilatus 金光 + 琉森城市天際線。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">18:05<span class="dur">★ 入住</span></div>
+          <div class="content">
+            <h4>Grand Hotel Schweizerhof Lucerne 入住 Wagner Suite</h4>
+            <p>Pier 1 步行 2 分。<strong>Wagner Suite</strong>——華格納 1859 下榻房型，含古董 Steinway 鋼琴、原木地板、湖畔陽台。</p>
+            <div class="tags"><span class="tag gold">1845 湖畔 Belle Époque</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">18:15–19:45<span class="dur">90 分</span></div>
+          <div class="content">
+            <h4>Hofkirche + 獅子紀念碑 + Kapellbrücke 黃昏</h4>
+            <p>Schweizerhof 步行 8 分至 Hofkirche（735）→ 10 分至 Löwendenkmal 獅子紀念碑（馬克吐溫稱「最動人石雕」）→ 回程經 Kapellbrücke（1333 木橋）黃昏光線。6 月日落 21:13，18:15 有 3 小時黃金光線。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">20:00<span class="dur">晚餐</span></div>
+          <div class="content">
+            <h4>Schweizerhof Galerie 主餐廳晚餐</h4>
+            <p>1845 ballroom 改建，水晶吊燈 + 壁畫 Belle Époque 原樣。Luzerner Chügelipastete（琉森肉酥皮派）+ 湖魚 Felchen + Rigi Beef。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stp-strip">
+      <span class="stp-label">D6 STP 節省</span>
+      <span class="stp-value">CHF 210（單日最高）</span>
+      Rigi Bahn 全免 78 + SGV 往返三段 90 + Bürgenstock-Bahn 全免 + Drahtseilbahn 住客免費 + Lucerne 公交（Hammetschwand 14 自費）
+    </div>
+
+    <div class="aging-strip">
+      <span class="label">🧬 抗老協議 D6</span>
+      <strong>離心收縮 × 古蹟徒步 × PBM 晨光</strong>：晨 06:00 Lake Lucerne 浸足 + 紅光凝視；Mt. Rigi 1,797m 齒軌登頂；Bürgenstock 1.5km Felsenweg 懸崖步道。
+    </div>
+
+    <div class="sec">
+      <h3>🏨 N6 飯店資訊</h3>
+      <div class="mini-card">
+        <div class="title">Grand Hotel Schweizerhof Luzern（1845）</div>
+        <div class="sub">5★ Swiss Deluxe · 湖畔 Belle Époque · Hauser 家族 5 代</div>
+        <p><strong>Wagner Suite</strong>——華格納 1859 下榻房型 + 古董 Steinway 鋼琴</p>
+        <p><strong>Galerie 餐廳</strong>（1845 原 ballroom）+ Schweizerhof Spa（2014 翻新，含 12m 泳池）</p>
+        <p><strong>名人</strong>：Wagner、Rachmaninoff、托爾斯泰、馬克吐溫、Audrey Hepburn、26 位君王</p>
+        <p class="booking"><a href="https://www.schweizerhof-luzern.ch/" target="_blank">官網直訂</a> · <a href="https://www.booking.com/searchresults.html?ss=Schweizerhof+Luzern&aid={{BOOKING_AID}}&label=swiss2026_N6_schweizerhof" target="_blank">Booking</a> / <a href="https://www.expedia.com/Hotel-Search?destination=Schweizerhof+Luzern&siteid=1&affcid={{EXPEDIA_ID}}&clickref=swiss2026_N6_schweizerhof" target="_blank">Expedia</a> · 預估 CHF 500-800</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<!-- ============ DAY 7 ============ -->
+<article id="d7" class="day-card">
+  <header class="day-head">
+    <div class="num">DAY 07 · 06.08 MON</div>
+    <h2>Lucerne → Bern UNESCO（2.5h）→ Zurich Widder</h2>
+    <div class="meta">
+      <strong>主軸：</strong>Bern 愛因斯坦故居 + 達達主義 + 米其林一星<br>
+      <strong>住宿：</strong>Widder Hotel Zurich · 9 棟中世紀宅邸 1995 整合<br>
+      <strong>海拔：</strong>436m → 540m（Bern）→ 408m
+    </div>
+  </header>
+  <div class="day-body">
+
+    <div class="quick-facts">
+      <div class="qf"><div class="label">行程時長</div><div class="value">12 hrs</div></div>
+      <div class="qf"><div class="label">UNESCO 城市</div><div class="value big">2 座</div></div>
+      <div class="qf"><div class="label">STP 節省</div><div class="value">CHF 95</div></div>
+      <div class="qf"><div class="label">米其林星</div><div class="value">★ Widder</div></div>
+      <div class="qf"><div class="label">需訂位</div><div class="value big" style="color:var(--swiss);">★ Widder dinner</div></div>
+    </div>
+
+    <div class="box warn">
+      <span class="label">⚠ 14 天前必訂</span>
+      <strong>Restaurant Widder ⭐ 米其林一星</strong>：行前 14 天網路訂位（widderhotel.com）。週一晚常滿。
+    </div>
+
+    <div class="sec">
+      <h3>⏱ 詳細時序</h3>
+      <ul class="tl">
+        <li>
+          <div class="time">07:30<span class="dur">早餐</span></div>
+          <div class="content">
+            <h4>Schweizerhof Galerie 早餐</h4>
+            <p>1845 ballroom Galerie 餐廳。水晶吊燈下最後一餐琉森湖畔晨光。整理手提行李準備退房。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">08:30<span class="dur">退房</span></div>
+          <div class="content">
+            <h4>Schweizerhof 退房 + SBB Fast Luggage</h4>
+            <p>使用 <strong>SBB Fast Luggage</strong> 從 Lucerne 站直送 Widder Hotel Zurich（CHF 12，當日抵達）。Bern 中停 2.5 小時完全輕裝。</p>
+            <div class="tags"><span class="tag tip">SBB 行李托運</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">08:55–09:59<span class="dur">IR 1h</span></div>
+          <div class="content">
+            <h4>Lucerne → Bern</h4>
+            <p>每小時 55 分發車。穿越 Entlebuch UNESCO 生物圈與 Emmental 山谷。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">10:00–12:30<span class="dur">⭐ 2.5h Bern UNESCO</span></div>
+          <div class="content">
+            <h4>★ Bern UNESCO 舊城走訪</h4>
+            <p>1983 UNESCO 世界遺產。2.5 小時路線：</p>
+            <ol style="margin:6px 0 0 16px;font-size:12px;line-height:1.8;">
+              <li>10:05-10:30 <strong>Bundeshaus 國會大廈</strong>（1902 新文藝復興立面 + 26 邦噴泉）</li>
+              <li>10:30-10:45 <strong>Bärenplatz + Käfigturm</strong>（1256 中世紀城門）</li>
+              <li>10:45-11:10 <strong>Marktgasse 6km 中世紀拱廊街</strong></li>
+              <li>11:10-11:30 <strong>Zytglogge 天文鐘塔</strong>（1218，整點前 4 分鐘機械木偶表演——務必排在 11:56 整點前）</li>
+              <li>11:30-12:00 <strong>★ Kramgasse 49 愛因斯坦故居</strong>（1905 奇蹟年相對論誕生地，CHF 8）</li>
+              <li>12:00-12:15 <strong>Münster 大教堂</strong>外觀（瑞士最高教堂尖塔，<strong>登塔 CHF 5 254 階</strong> 加碼）</li>
+              <li>12:15-12:30 步行回 Bern Bahnhof</li>
+            </ol>
+            <p style="margin-top:6px;"><strong>替代加碼</strong>：Bernisches Historisches Museum 愛因斯坦展廳（STP 100% 免費，更完整科學遺產）。</p>
+            <div class="tags"><span class="tag gold">UNESCO 世界遺產</span><span class="tag must">愛因斯坦故居</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">12:30<span class="dur">外帶午餐</span></div>
+          <div class="content">
+            <h4>Bahnhof Markthalle 外帶</h4>
+            <p>Bratwurst + Rösti（Bern 名物）+ 礦泉水。IC 一等艙車上享用。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">12:34–13:30<span class="dur">IC 56 分</span></div>
+          <div class="content">
+            <h4>Bern → Zurich HB（IC 一等艙）</h4>
+            <p>每小時 2 班 IC 直達。一等艙含小桌、插座、安靜。沿途 Aare 河谷與中部高原。</p>
+            <div class="tags"><span class="tag ok">STP 全免</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">13:40<span class="dur">★ 入住</span></div>
+          <div class="content">
+            <h4>Widder Hotel 入住</h4>
+            <p>Zurich HB 步行 8 分。建議 <strong>Junior Suite Augustinergasse</strong>——其中一間最具歷史層次的房型，房內可見不同世紀建築元素。13:40 入住後仍有完整下午。</p>
+            <div class="tags"><span class="tag gold">9 棟中世紀宅邸</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">14:00–16:00<span class="dur">2 hrs</span></div>
+          <div class="content">
+            <h4>Bahnhofstrasse 採購 + Cabaret Voltaire</h4>
+            <p>週一商店全開：① Sprüngli Paradeplatz 本店（Luxemburgerli 馬卡龍）② Bucherer 腕錶 ③ Globus 百貨（La Prairie / Valmont / Jellycat）④ Victorinox 旗艦店。<strong>務必索取 Global Blue 退稅表</strong>（D8 ZRH 機場辦理）。</p>
+            <p style="margin-top:6px;">→ 採購後步行 8 分至 <strong>Cabaret Voltaire（Spiegelgasse 1）</strong>——1916 達達主義誕生地。<strong>STP 100% 免費 CHF 12</strong>。</p>
+            <div class="tags"><span class="tag gold">週一商店全開</span><span class="tag ok">Cabaret Voltaire STP 免費</span><span class="tag must">⚠ Landesmuseum 週一閉館</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">16:00–18:30<span class="dur">2h30</span></div>
+          <div class="content">
+            <h4>蘇黎世舊城三地標：Grossmünster + Lindenhof + Fraumünster</h4>
+            <p>Widder 所在街區即為老城核心。</p>
+            <ul style="margin:6px 0 0 16px;font-size:12px;line-height:1.7;">
+              <li><strong>Grossmünster 大教堂</strong>（1230，Zwingli 宗教改革發源地；STP 含登塔，可俯瞰湖與舊城）</li>
+              <li><strong>Lindenhof 山丘</strong>（凱爾特人遺址，俯瞰 Limmat 河）</li>
+              <li><strong>Fraumünster 教堂</strong>（夏卡爾 1970 彩繪玻璃 + Giacometti 早期玻璃，CHF 5）</li>
+            </ul>
+            <div class="tags"><span class="tag ok">Grossmünster 登塔 STP 含</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">19:30<span class="dur">★ 米其林</span></div>
+          <div class="content">
+            <h4>Restaurant Widder ⭐ 米其林一星晚餐</h4>
+            <p>主廚 <strong>Stefan Heilemann</strong>（曾於日本受訓），瑞士本土食材 + 東亞元素。<strong>Tasting menu CHF 285 / 7 道</strong>，À la carte 主菜 CHF 75-110。</p>
+            <div class="tags"><span class="tag gold">米其林一星</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">22:00–23:30<span class="dur">可選</span></div>
+          <div class="content">
+            <h4>Widder Bar（爵士酒吧，可選）</h4>
+            <p>瑞士最古爵士酒吧之一，週一晚常有 live 三人團。原 1380 Augustinergasse 軍械庫遺跡牆面 + 11,000 種威士忌世界最大選酒之一。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stp-strip">
+      <span class="stp-label">D7 STP 節省</span>
+      <span class="stp-value">CHF 95+</span>
+      Lucerne-Bern-Zurich IR+IC 80 + Cabaret Voltaire 12 + Grossmünster 登塔 + 市內公交 + Bern Einstein 展廳（加碼免費 CHF 16）
+    </div>
+
+    <div class="aging-strip">
+      <span class="label">🧬 抗老協議 D7</span>
+      <strong>恢復 × 城市步行</strong>：Bern 舊城 2.5h 步行（鵝卵石地面本體感受覺刺激）。高蛋白晚餐（米其林 Widder 主菜）。
+    </div>
+
+    <div class="sec">
+      <h3>🏨 N7 飯店資訊</h3>
+      <div class="mini-card">
+        <div class="title">Widder Hotel Zurich（13c / 1995 整合）</div>
+        <div class="sub">5★ Leading Hotels of the World · 海拔 408m</div>
+        <p><strong>9 棟中世紀宅邸（最古超過 700 年）</strong> Tilla Theus 主持改造 1981-1995 整合。<strong>1996 瑞士聯邦古蹟保存獎</strong>。</p>
+        <p><strong>每間客房結構不同</strong>——13 世紀木樑 / 17 世紀濕壁畫 / 中世紀塔樓階梯</p>
+        <p><strong>Restaurant Widder ⭐ 米其林一星</strong> + Widder Spa + 11,000 種威士忌 Widder Bar</p>
+        <p class="booking"><a href="https://www.widderhotel.com/" target="_blank">官網直訂</a> · <a href="https://www.booking.com/searchresults.html?ss=Widder+Hotel+Zurich&aid={{BOOKING_AID}}&label=swiss2026_N7_widder" target="_blank">Booking</a> / <a href="https://www.expedia.com/Hotel-Search?destination=Widder+Hotel+Zurich&siteid=1&affcid={{EXPEDIA_ID}}&clickref=swiss2026_N7_widder" target="_blank">Expedia</a> · 預估 CHF 700-1,000</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<!-- ============ DAY 8 ============ -->
+<article id="d8" class="day-card">
+  <header class="day-head">
+    <div class="num">DAY 08 · 06.09 TUE · 撤離日</div>
+    <h2>Zurich Bahnhofstrasse → ZRH Senator Lounge → LHR T4</h2>
+    <div class="meta">
+      <strong>主軸：</strong>退稅 + Business Comfort 含 Lounge 4h30 + 飛行前抗老恢復<br>
+      <strong>住宿：</strong>Hilton London Heathrow Airport Terminal 4（過境夜）<br>
+      <strong>海拔：</strong>408m → 飛行
+    </div>
+  </header>
+  <div class="day-body">
+
+    <div class="quick-facts">
+      <div class="qf"><div class="label">行程時長</div><div class="value">14 hrs</div></div>
+      <div class="qf"><div class="label">退稅辦理</div><div class="value big">ZRH</div></div>
+      <div class="qf"><div class="label">Lounge</div><div class="value">4h30</div></div>
+      <div class="qf"><div class="label">航班</div><div class="value">LX 340</div></div>
+      <div class="qf"><div class="label">需訂位</div><div class="value">已訂</div></div>
+    </div>
+
+    <div class="sec">
+      <h3>⏱ 詳細時序</h3>
+      <ul class="tl">
+        <li>
+          <div class="time">07:00–07:45<span class="dur">Spa</span></div>
+          <div class="content">
+            <h4>Widder Spa（採購前快速恢復）</h4>
+            <p>桑拿 + 土耳其浴 + 小型健身房（無泳池）。<strong>Bahnhofstrasse 採購前快速 30 分啟動循環</strong>，副交感主導後再進入商業採購壓力。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">08:00<span class="dur">早餐</span></div>
+          <div class="content">
+            <h4>Widder Hotel 早餐</h4>
+            <p>蘇黎世湖魚、Engadin 山地起司、本地酸種麵包。木樑下早餐是離別 Widder 的開場鏡頭。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">09:00–11:00<span class="dur">採購</span></div>
+          <div class="content">
+            <h4>Bahnhofstrasse 最後採購 + Landesmuseum（週二開）</h4>
+            <p>輕裝出門集中處理：</p>
+            <ul style="margin:6px 0 0 16px;font-size:12px;line-height:1.7;">
+              <li>Sprüngli Paradeplatz 本店（Luxemburgerli 馬卡龍）</li>
+              <li>Bucherer 腕錶 / La Prairie / Valmont / Globus / Victorinox</li>
+              <li>順道 <strong>Swiss National Museum / Landesmuseum</strong>（Zurich HB 旁，<strong>STP 100% 免費</strong>，09:00 開館）</li>
+            </ul>
+            <div class="tags"><span class="tag gold">週二商店全開</span><span class="tag ok">Landesmuseum STP 免費</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">11:30<span class="dur">退房</span></div>
+          <div class="content">
+            <h4>Widder Hotel 退房 + 步行 Zurich HB</h4>
+            <p>11:30 退房（延長上限）。手提行李 + 採購紙袋步行 8 分至 Zurich HB。不使用 SBB Fast Luggage——所有採購商品需親自帶到機場退稅櫃檯抽查。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">11:42–11:54<span class="dur">S-Bahn 12 分</span></div>
+          <div class="content">
+            <h4>Zurich HB → ZRH Airport</h4>
+            <p>S2/S16/S24 每 10 分一班。STP 一等艙最後一日仍有效。</p>
+            <div class="tags"><span class="tag ok">STP 最後一日</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">12:00–15:00<span class="dur">3 hrs · 採購</span></div>
+          <div class="content">
+            <h4>The Circle 採購 + 午餐</h4>
+            <p>2020 啟用機場購物商城，含 80+ 品牌：</p>
+            <ul style="margin:6px 0 0 16px;font-size:12px;line-height:1.7;">
+              <li>Lindt Home of Chocolate（9m 巧克力噴泉）</li>
+              <li>Sprüngli The Circle 分店</li>
+              <li>Victorinox The Circle</li>
+              <li>Hyatt Regency 樓 Bistro 午餐</li>
+              <li>Toblerone Duty Free 預備裝</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:00–15:30<span class="dur">Biz Comfort 含</span></div>
+          <div class="content">
+            <h4>Swiss Business 報到櫃台 + Global Blue 退稅</h4>
+            <p>回 ZRH 報到層。Business Class 專屬櫃台（手提 7kg 直接帶上機，無需托運）。<strong>Global Blue 退稅櫃檯</strong>蓋章——商品需未拆封、可出示，刷卡帳戶退款（匯率較佳）。</p>
+            <div class="tags"><span class="tag gold">Business 報到櫃台</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">15:30–16:00<span class="dur">Fast Lane</span></div>
+          <div class="content">
+            <h4>Security Fast Lane（Biz Comfort 含）</h4>
+            <p>一般 25-30 分排隊變 5-8 分。出示登機證走商務專用通道。</p>
+            <div class="tags"><span class="tag gold">Fast Lane 5-8 分</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">16:00–20:30<span class="dur">⭐ Lounge 4h30</span></div>
+          <div class="content">
+            <h4>★ ZRH Swiss Senator / Aspire Lounge（Biz Comfort 免費）</h4>
+            <p>價值 CHF 60+。4h30 的用法：</p>
+            <ul style="margin:6px 0 0 16px;font-size:12px;line-height:1.7;">
+              <li>16:00-16:30 淋浴 + 換上飛行舒適服</li>
+              <li>16:30-18:00 熱食晚餐 + 1 杯香檳 + 補水 1.5L</li>
+              <li>18:00-19:30 沙發區 90 分補眠（4-7-8 呼吸）</li>
+              <li>19:30-20:00 充滿手機 / iPad / Power Bank</li>
+              <li>20:00-20:30 步行至登機門</li>
+            </ul>
+            <p style="margin-top:6px;"><strong>這 4h30 是 6/10 EY62 19h 飛行前的最後抗老處方執行點</strong>。</p>
+            <div class="tags"><span class="tag gold">Biz Comfort 免費 Lounge</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">20:30<span class="dur">優先登機</span></div>
+          <div class="content">
+            <h4>LX 340 A gates 登機門 + Priority Boarding</h4>
+            <p>A220-300 商務艙在前段。中間座位封住（2-2 變 1-2）。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">20:55–21:45<span class="dur">LX 340</span></div>
+          <div class="content">
+            <h4>★ LX 340 ZRH → LHR T2（Air Baltic 承運）</h4>
+            <p>已訂 GBP ~199。<strong>含 onboard meal</strong>（熱食 + 香檳 / 紅白酒）+ 中間空座 + 機上 WiFi。飛行中 power nap。</p>
+            <div class="tags"><span class="tag ok">已訂購</span><span class="tag gold">Biz Comfort</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="time">21:45<span class="dur">抵 LHR T2</span></div>
+          <div class="content">
+            <h4>LHR T2 抵達 + UK 入境</h4>
+            <p>優先下機（Biz Comfort 含）。UK ETA 已預申請，e-gate 通關 5 分鐘。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">22:15–22:45<span class="dur">T2→T4</span></div>
+          <div class="content">
+            <h4>Inter-Terminal Pod Bus T2 → T4</h4>
+            <p>Heathrow inter-terminal pod bus（免費 airside 5-10 分一班，15-20 分）。或 Heathrow Express 反向至 T4。</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">23:00<span class="dur">★ 入住</span></div>
+          <div class="content">
+            <h4>Hilton London Heathrow Airport T4 入住</h4>
+            <p>T4 covered walkway 連接航廈，步行 7 分。建議 King Executive Room 或 Runway View Room。<strong>立刻睡覺</strong>。</p>
+            <div class="tags"><span class="tag gold">T4 直連</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box ok">
+      <span class="label">📋 D9 6/10 EY62 撤離日（網頁不單獨成日）</span>
+      <strong>07:30 起床 → 08:00 Hilton 泳池游 30 分（DVT 預防）→ 08:30 桑拿 → 09:30 早餐 → 11:30 退房 → 12:00 步行 covered walkway 至 T4 EY62 報到櫃台 → 14:00 LHR→AUH→TPE</strong>，19 小時飛行回台北。每 60 分起立活動、抗血栓襪、每 60 分 500ml 水、避免酒精咖啡因。
+    </div>
+
+    <div class="aging-strip">
+      <span class="label">🧬 抗老協議 D8-D9</span>
+      <strong>過渡 × 抗血栓</strong>：D8 早晨 Widder Spa 30 分恢復；ZRH Lounge 4h30 是飛行前最後協議執行（補水 + 熱餐 + 補眠）；D9 早晨 Hilton 泳池 + 桑拿降低機艙乾燥對皮膚衝擊；19h 飛行中 30 分起立、抗血栓襪、補水。
+    </div>
+
+    <div class="sec">
+      <h3>🏨 N8 飯店資訊</h3>
+      <div class="mini-card">
+        <div class="title">Hilton London Heathrow Airport Terminal 4</div>
+        <div class="sub">4★ Hilton · 機場過境飯店 · T4 covered walkway 連接</div>
+        <p><strong>機能：</strong>24h 室內泳池 + 桑拿 + 健身房 + 24h 早餐</p>
+        <p><strong>動線：</strong>飯店 → T4 報到櫃台 covered walkway <strong>7 分步行</strong>，無戶外無轉乘</p>
+        <p><strong>建議房型：</strong>King Executive Room / Runway View（高樓層遠電梯）</p>
+        <p class="booking"><a href="https://www.hilton.com/en/hotels/lhrt4hi-hilton-london-heathrow-airport-terminal-4/" target="_blank">官網直訂</a> · <a href="https://www.booking.com/searchresults.html?ss=Hilton+London+Heathrow+Airport+Terminal+4&aid={{BOOKING_AID}}&label=swiss2026_N8_lhr" target="_blank">Booking</a> / <a href="https://www.expedia.com/Hotel-Search?destination=Hilton+London+Heathrow+Airport+Terminal+4&siteid=1&affcid={{EXPEDIA_ID}}&clickref=swiss2026_N8_lhr" target="_blank">Expedia</a> · 預估 GBP 150-220</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <p>瑞士「湖上山內雙軸」八日 · 2026.06.02–06.09 · 每日詳細分頁</p>
+  <p style="margin-top:8px;"><a href="index.html">回總覽</a> · <a href="confirm.html">訂購確認</a></p>
+</footer>
+
+<script>
+// Highlight current day tab on scroll
+const tabs = document.querySelectorAll('.day-tabs a');
+const days = document.querySelectorAll('article.day-card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      tabs.forEach(t => t.classList.remove('active'));
+      const activeTab = document.querySelector(`.day-tabs a[href="#${id}"]`);
+      if (activeTab) activeTab.classList.add('active');
+    }
+  });
+}, { rootMargin: '-30% 0px -50% 0px' });
+
+days.forEach(d => observer.observe(d));
+</script>
+
+</body>
+</html>
