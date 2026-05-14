@@ -1345,173 +1345,6 @@ footer .meta-info { opacity: .6; font-size: 12px; }
 .hotel-deep .role{font-size:10px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:5px}
 @media (max-width:760px){.daily-gmap{grid-template-columns:1fr}.daily-gmap iframe{height:220px}.gmap-card iframe{height:210px}}
 
-/* ============ PREMIUM PAYWALL ============ */
-.premium-gate {
-  position: relative;
-}
-.premium-gate.locked > *:not(.paywall-overlay) {
-  filter: blur(6px);
-  pointer-events: none;
-  user-select: none;
-}
-.paywall-overlay {
-  display: none;
-  position: absolute;
-  inset: 0;
-  z-index: 60;
-  background: linear-gradient(180deg, rgba(251,249,245,.6) 0%, rgba(251,249,245,.97) 40%);
-  backdrop-filter: blur(2px);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 32px;
-  text-align: center;
-}
-.premium-gate.locked .paywall-overlay { display: flex; }
-.paywall-overlay .pw-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 4px 12px rgba(176,138,60,.25));
-}
-.paywall-overlay h3 {
-  font-size: clamp(22px, 3vw, 30px);
-  color: var(--ink);
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-.paywall-overlay .pw-desc {
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 15px;
-  color: var(--ink-soft);
-  max-width: 520px;
-  line-height: 1.85;
-  margin-bottom: 28px;
-}
-.paywall-overlay .pw-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, var(--gold) 0%, #d4a84a 100%);
-  color: white;
-  padding: 14px 36px;
-  border: none;
-  border-radius: 100px;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(176,138,60,.35);
-  transition: transform .2s, box-shadow .2s;
-}
-.paywall-overlay .pw-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(176,138,60,.45);
-}
-.paywall-overlay .pw-price {
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin-top: 12px;
-  letter-spacing: 1px;
-}
-.paywall-overlay .pw-features {
-  list-style: none;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 13px;
-  color: var(--ink-soft);
-  margin-top: 20px;
-  text-align: left;
-  max-width: 400px;
-}
-.paywall-overlay .pw-features li {
-  padding: 4px 0;
-}
-.paywall-overlay .pw-features li::before {
-  content: '✓ ';
-  color: var(--gold);
-  font-weight: 700;
-}
-
-/* ============ O2O CTA CARD ============ */
-.cta-o2o {
-  background: linear-gradient(135deg, #0f1923 0%, #1a2f42 50%, #2c4a5e 100%);
-  border-radius: 12px;
-  padding: 0;
-  margin: 40px 0;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 8px 32px rgba(26,29,36,.15);
-}
-.cta-o2o::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--gold) 0%, #f0d48a 50%, var(--gold) 100%);
-}
-.cta-o2o .cta-inner {
-  padding: 40px 36px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 32px;
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .cta-o2o .cta-inner { grid-template-columns: 1fr; text-align: center; }
-}
-.cta-o2o .cta-badge {
-  display: inline-block;
-  background: rgba(176,138,60,.2);
-  color: var(--gold);
-  padding: 4px 14px;
-  border-radius: 100px;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 11px;
-  letter-spacing: 3px;
-  font-weight: 700;
-  margin-bottom: 14px;
-  border: 1px solid rgba(176,138,60,.3);
-}
-.cta-o2o h3 {
-  font-size: clamp(22px, 3vw, 28px);
-  color: white;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-.cta-o2o p {
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
-  color: rgba(255,255,255,.75);
-  line-height: 1.85;
-  max-width: 560px;
-}
-.cta-o2o .cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, var(--gold) 0%, #d4a84a 100%);
-  color: #1a1d24;
-  padding: 16px 32px;
-  border: none;
-  border-radius: 6px;
-  font-family: "Noto Sans TC", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(176,138,60,.4);
-  transition: transform .2s, box-shadow .2s;
-}
-.cta-o2o .cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(176,138,60,.55);
-  border-bottom: none;
-}
-
 /* ============ AFFILIATE BANNER ============ */
 .affiliate-banner {
   background: linear-gradient(135deg, #fdfaf2 0%, #f8f0db 100%);
@@ -1659,8 +1492,8 @@ footer .meta-info { opacity: .6; font-size: 12px; }
       <li><a href="#flights">✈ 班機</a></li>
       <li><a href="#airports">機場戰略</a></li>
       <li><a href="#strategy">戰略</a></li>
-      <li><a href="#science">微氣候醫學</a></li>
-      <li><a href="#antiaging" style="color:var(--gold);font-weight:700;">🧬 抗老醫學</a></li>
+      <li><a href="#science">微氣候</a></li>
+      <li><a href="#recovery" style="color:var(--gold);font-weight:700;">旅行恢復</a></li>
       <li><a href="#pass">通票</a></li>
       <li><a href="#itinerary">每日動線</a></li>
       <li><a href="#hotels">8 晚住宿</a></li>
@@ -1668,7 +1501,6 @@ footer .meta-info { opacity: .6; font-size: 12px; }
       <li><a href="#culture-geo" style="color:var(--gold);font-weight:700;">📚 文化地理</a></li>
       <li><a href="#checklist">行前清單</a></li>
       <li><a href="daily.html" style="background:var(--alpine);color:white;padding:6px 12px;font-weight:700;">📅 每日詳細 →</a></li>
-      <li><a href="confirm.html" style="background:var(--swiss);color:white;padding:6px 12px;font-weight:700;">📋 訂購確認 →</a></li>
     </ul>
   </div>
 </nav>
@@ -1879,7 +1711,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
     <div class="section-head">
       <div class="num sans" style="color:var(--gold);">CULTURE · HISTORY · GEOGRAPHY · SCIENCE</div>
       <h2>在地文化・歷史・地理・科學</h2>
-      <div class="lead sans">把八天每一處停留點視為「<strong>知識斷層面</strong>」：每一站都有一條深時間（地質）、一條歷史時間（人類事件）、一條當代時間（科技與制度）交織。下列十二節整理出可作為書稿章節、影片旁白、深度直播主題的素材。</div>
+      <div class="lead sans">把八天每一處停留點視為「<strong>知識斷層面</strong>」：每一站都有一條深時間（地質）、一條歷史時間（人類事件）、一條當代時間（科技與制度）交織。下列十二節整理出可作為書稿章節、影片旁白、深度圖文主題的素材。</div>
     </div>
 
     <!-- 01 Geneva -->
@@ -1889,7 +1721,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理</h4><p>位於 Rhône 河流出 Lake Léman（湖面 372m）的西南端，<strong>侏羅山（Jura）與阿爾卑斯之間的湖盆</strong>，自古為跨阿爾卑斯北—南商路與北東—西法蘭克商路的交會點。</p>
         <h4>歷史</h4><p><strong>1536 加爾文（Jean Calvin）</strong>抵達日內瓦推動宗教改革，禁止飾品 → 工匠轉作鐘錶 → 1601 鐘錶業同業公會。十九世紀<strong>1863 Henry Dunant 創立紅十字會</strong>、<strong>1920 國際聯盟總部設於萬國宮</strong>、<strong>1954 CERN 在邊境梅蘭（Meyrin）建立</strong>，奠定「中立性 × 國際組織 × 高科技」的城市身份。</p>
         <h4>科學</h4><p>CERN 大型強子對撞機（LHC）周長 27 公里，橫跨法瑞國界；2012 年在此確認希格斯玻色子。鐘錶業 Patek Philippe、Rolex 總部即在此。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Jet d'Eau 140m 噴泉</span><span class="shot-pill">St. Pierre 加爾文椅</span><span class="shot-pill">萬國宮折斷椅</span><span class="shot-pill">CERN 訪客中心</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Jet d'Eau 140m 噴泉</span><span class="shot-pill">St. Pierre 加爾文椅</span><span class="shot-pill">萬國宮折斷椅</span><span class="shot-pill">CERN 訪客中心</span>
       </div>
     </article>
 
@@ -1900,7 +1732,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理</h4><p>位於 Lake Geneva（Lac Léman）北岸中段、Lavaux 葡萄園東端門戶；海拔 385m。被 <strong>Mont Pèlerin 1,084m</strong> 從北方保護，形成<strong>瑞士里維埃拉（Swiss Riviera）</strong>地中海式微氣候，年均溫高於日內瓦 1.5°C。</p>
         <h4>歷史</h4><p>1842 年 <strong>Hôtel des Trois Couronnes</strong> 開業，是 Lake Geneva 北岸最早的 Belle Époque 大飯店之一。<strong>1867 Henry Nestlé 在 Vevey 創立雀巢公司</strong>，總部至今仍在湖畔；<strong>卓別林 1952 流亡至此，1977 病逝</strong>，葬於 Vevey 上方 Corsier-sur-Vevey 墓園。Henry James《黛西米勒》（1879）開場即在 Trois Couronnes。</p>
         <h4>文化</h4><p>湖畔 <strong>巨型叉子裝置（The Fork in the Lake, 1995）</strong>是 Vevey 食品博物館 Alimentarium 的象徵，現為全球攝影打卡點。Chaplin's World 博物館（2016 開幕）於卓別林故居 Manoir de Ban，是研究 20 世紀電影史的重要場所。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">湖畔大叉子</span><span class="shot-pill">卓別林銅像</span><span class="shot-pill">Trois Couronnes 廊柱</span><span class="shot-pill">Lavaux 東端</span>
+        <h4>拍攝素材</h4><span class="shot-pill">湖畔大叉子</span><span class="shot-pill">卓別林銅像</span><span class="shot-pill">Trois Couronnes 廊柱</span><span class="shot-pill">Lavaux 東端</span>
       </div>
     </article>
 
@@ -1911,7 +1743,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理</h4><p>從 Lutry 至 Vevey 之間 30 公里 Lake Geneva 北岸的<strong>陡峭葡萄梯田</strong>，總面積 805 公頃、海拔 372–540m。<strong>「三日太陽」（Trois Soleils）</strong>是當地酒農術語：① 直射陽光、② 湖面反射光、③ 石牆儲熱夜間釋放——使 Chasselas 白葡萄獲得阿爾卑斯北麓罕見的成熟度。</p>
         <h4>歷史</h4><p><strong>11 世紀本篤會（Benedictine）與西多會（Cistercian）修士</strong>開墾梯田，與布根第 Côte de Beaune 同時期；<strong>800 年來持續以人手維護</strong>，是歐洲少數從未現代化的耕地。<strong>2007 UNESCO 世界文化遺產</strong>登錄，認證其「人類文化與自然景觀的卓越互動」。</p>
         <h4>科學</h4><p>陡坡（最大 70%）使機械無法進入，<strong>每串葡萄須以人手採摘</strong>；石牆夜間釋熱差使糖度比平地高 1.5°Brix。葡萄品種 Chasselas（莎斯拉）為瑞士特有，幾乎不出口；Lavaux 為其全球最高品質產區。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Lutry 起點石牆</span><span class="shot-pill">Saint-Saphorin 教堂</span><span class="shot-pill">Rivaz 湖景</span><span class="shot-pill">Chasselas 葡萄</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Lutry 起點石牆</span><span class="shot-pill">Saint-Saphorin 教堂</span><span class="shot-pill">Rivaz 湖景</span><span class="shot-pill">Chasselas 葡萄</span>
       </div>
     </article>
 
@@ -1922,7 +1754,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理</h4><p>位於 Lake Geneva 北岸西半段、La Côte 葡萄產區中心、Geneva 與 Lausanne 之間直線中點；海拔 375m。<strong>湖面正對法國 Yvoire 中世紀古鎮</strong>，是瑞法湖光對望的最佳基準點。</p>
         <h4>歷史</h4><p><strong>1264 年 Louis I of Savoy</strong> 建造 Rolle 城堡作為扼控 Geneva–Lausanne 商路的稅關；<strong>1742 城堡側翼改為客棧 Hostellerie du Château</strong>，接待跨阿爾卑斯商旅與貴族至今 280 年。19 世紀拜倫、雪萊、Madame de Staël 均曾在 Rolle 一帶停留。</p>
         <h4>地標</h4><p>湖中小島 <strong>Île de la Harpe</strong>（1838 建造方尖碑），紀念出身 Rolle 的 <strong>Frédéric-César de La Harpe</strong>——俄國沙皇亞歷山大一世的家教，也是 1798 年沃州（Vaud）脫離伯恩統治的政治推手。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">城堡塔樓</span><span class="shot-pill">Île de la Harpe</span><span class="shot-pill">湖畔棕櫚</span><span class="shot-pill">La Côte 葡萄園</span>
+        <h4>拍攝素材</h4><span class="shot-pill">城堡塔樓</span><span class="shot-pill">Île de la Harpe</span><span class="shot-pill">湖畔棕櫚</span><span class="shot-pill">La Côte 葡萄園</span>
       </div>
     </article>
 
@@ -1933,7 +1765,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理</h4><p>典型<strong>冰河 U 型谷（U-shaped glacial valley）</strong>：末次冰期（Würm，約 11.7 萬–1.1 萬年前）阿萊奇冰川支流刨蝕成 8 公里長、平均 400m 寬、谷壁高差近 1,000m。<strong>72 條瀑布</strong>由<strong>懸谷（hanging valley）</strong>形成——支流谷被主冰川下切後懸於空中，水流自高處直墜。</p>
         <h4>科學　·　雷納德效應的天然反應爐</h4><p>Staubbach（297m 落差）為阿爾卑斯第三高，1892 年 <strong>Philipp Lenard</strong>（1905 諾貝爾物理獎）正是在此類瀑布觀察到水滴撞擊產生負電荷的「雷納德效應」，今天用於空氣負離子治療研究。</p>
         <h4>文學歷史</h4><p><strong>歌德 1779 訪此</strong>，寫下 <em>Gesang der Geister über den Wassern</em>（水上靈魂之歌）。<strong>Tolkien</strong> 1911 年旅行至此，明確以 Lauterbrunnen 為《魔戒》Rivendell（瑞文戴爾）原型。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Staubbach 後方步道</span><span class="shot-pill">Trümmelbach 地下瀑布</span><span class="shot-pill">U 型谷壁仰角</span><span class="shot-pill">谷底牧場</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Staubbach 後方步道</span><span class="shot-pill">Trümmelbach 地下瀑布</span><span class="shot-pill">U 型谷壁仰角</span><span class="shot-pill">谷底牧場</span>
       </div>
     </article>
 
@@ -1944,7 +1776,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理</h4><p>建於 Lauterbrunnen 谷東側日照台地，正對<strong>少女峰（Jungfrau 4,158m）─僧侶峰（Mönch 4,107m）─艾格峰（Eiger 3,967m）</strong>三聯。WAB 齒軌窄軌（800mm 軌距）為連外唯一交通。</p>
         <h4>歷史</h4><p>1830 年代起為英國貴族夏季療養地，1893 年 <strong>Wengernalpbahn (WAB)</strong> 開通使其轉成阿爾卑斯山地觀光的樣板。村內<strong>禁止私家車超過 130 年</strong>，是世界少數仍保有「鐵道─步道─纜車」三重交通的山村。</p>
         <h4>運動史</h4><p><strong>Lauberhorn 滑雪賽（1930 開辦）</strong>是世界盃滑雪最古老、最長（4.48km）、最危險的下坡賽道，最高時速逾 161 km/h，每年 1 月舉辦。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">WAB 進站</span><span class="shot-pill">Lauberhorn 終點區</span><span class="shot-pill">教堂（1864）</span><span class="shot-pill">夜間零光害星空</span>
+        <h4>拍攝素材</h4><span class="shot-pill">WAB 進站</span><span class="shot-pill">Lauberhorn 終點區</span><span class="shot-pill">教堂（1864）</span><span class="shot-pill">夜間零光害星空</span>
       </div>
     </article>
 
@@ -1955,7 +1787,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理</h4><p>建於 Lauterbrunnen 谷西側懸崖台地，與 Wengen 隔谷對望；平常可由 BLM（Bergbahn Lauterbrunnen–Mürren）齒軌纜車組合進入，但本案期間 BLM 停駛，改由 Stechelberg 端 Schilthornbahn 20XX 進出。</p>
         <h4>歷史</h4><p><strong>1865 Thomas Cook</strong> 帶領首批英國觀光客上山，是現代意義上的<strong>「冬季觀光」起點</strong>。1924 年英國貴族 <strong>Sir Arnold Lunn</strong> 在此發明現代<strong>回轉滑雪（Slalom）</strong>，並創辦 Kandahar 滑雪俱樂部。</p>
         <h4>流行文化</h4><p>1969 年 007 系列《女王密令（On Her Majesty's Secret Service）》在 Schilthorn 山頂 Piz Gloria 拍攝，鞏固 Mürren─Schilthorn 軸線的全球能見度。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Schilthornbahn 20XX 改道進村</span><span class="shot-pill">懸崖台地</span><span class="shot-pill">Allmendhubel 花徑</span><span class="shot-pill">Lunn 紀念碑</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Schilthornbahn 20XX 改道進村</span><span class="shot-pill">懸崖台地</span><span class="shot-pill">Allmendhubel 花徑</span><span class="shot-pill">Lunn 紀念碑</span>
       </div>
     </article>
 
@@ -1966,7 +1798,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理／地質</h4><p>位於 Bernese Oberland 西側阿爾卑斯灰岩帶（Helvetic Nappes 推覆構造）；山頂 360 度可見 200 座山峰，含<strong>白朗峰（4,810m，法）、艾格、少女峰、僧侶峰</strong>。</p>
         <h4>科技</h4><p>2024–2026 完工的 <strong>Schilthornbahn 20XX</strong> 採 <strong>Funifor 系統</strong>：兩條獨立平行軌道、軌距 27m，使每段車廂可獨立運行、抗風能力較單軌 V 型提升 50%，最大載客 100 人 / 班、運能 800 人 / 小時。</p>
         <h4>電影史</h4><p>1969《女王密令》拍攝期間山頂旋轉餐廳尚未完工，劇組投資 30 萬瑞郎完成、保留 Piz Gloria 名稱與 007 主題至今，是<strong>商業電影改造地景</strong>的少見案例。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Funifor 雙軌進站</span><span class="shot-pill">Birg 玻璃地板</span><span class="shot-pill">旋轉餐廳 360°</span><span class="shot-pill">Bond World 展區</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Funifor 雙軌進站</span><span class="shot-pill">Birg 玻璃地板</span><span class="shot-pill">旋轉餐廳 360°</span><span class="shot-pill">Bond World 展區</span>
       </div>
     </article>
 
@@ -1977,7 +1809,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>地理／地質</h4><p>北壁為<strong>侏羅紀石灰岩</strong>峭壁，1,800m 垂直岩面，自基底至山頂歷時兩億年沉積與阿爾卑斯造山運動推覆而成。下方 <strong>Lower Grindelwald Glacier</strong> 自小冰期高峰（約 1855 年）以來已後退超過 2 公里，可作為氣候變遷的直觀證據。</p>
         <h4>登山史</h4><p>1936 年 <strong>Toni Kurz 慘劇</strong>——德奧四人隊試圖首登北壁，Kurz 在距救援者僅數公尺處因繩索打結凍死，成為 20 世紀登山史最廣為人知的悲劇。1938 年 <strong>Heckmair 隊（德奧聯合四人）完成首登</strong>。</p>
         <h4>當代</h4><p>2020 年 <strong>Eiger Express</strong> 三索纜車啟用，15 分鐘從 Grindelwald Terminal 直達 Eigergletscher 站，徹底改變上山節奏。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">北壁仰角 200mm</span><span class="shot-pill">Eiger Express 三索</span><span class="shot-pill">冰川後退標示牌</span><span class="shot-pill">Bachalpsee 鏡面湖</span>
+        <h4>拍攝素材</h4><span class="shot-pill">北壁仰角 200mm</span><span class="shot-pill">Eiger Express 三索</span><span class="shot-pill">冰川後退標示牌</span><span class="shot-pill">Bachalpsee 鏡面湖</span>
       </div>
     </article>
 
@@ -1988,7 +1820,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>工程史</h4><p>1893 年 <strong>Adolf Guyer-Zeller</strong> 在 Schilthorn 旅行時構想此鐵路；1896 動工、1912 年完工，<strong>16 年工期、7.1 km 隧道穿透艾格與僧侶峰岩體</strong>，是當時世界最高鐵路工程。1899 年發生工人罷工與爆破意外導致 6 死，工程進度與政治賠償成為瑞士勞工史經典案例。</p>
         <h4>地理</h4><p>位於<strong>少女峰與僧侶峰之間鞍部</strong>，俯瞰<strong>阿萊奇冰川（Aletsch Glacier）</strong>——歐洲最長冰川 23 km、面積 78 km²，<strong>2001 列入 UNESCO 世界自然遺產</strong>。冰川自 1980 年代以來每年後退 30–50m。</p>
         <h4>科學</h4><p>Sphinx 觀景台 3,571m 設有 <strong>1937 年啟用的高山天文與大氣研究站</strong>，今天仍是歐洲大氣化學基線觀測點之一（CO₂、氣溶膠、宇宙射線）。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">隧道黑場</span><span class="shot-pill">Eismeer 觀景窗</span><span class="shot-pill">Sphinx 雪原</span><span class="shot-pill">阿萊奇冰川</span>
+        <h4>拍攝素材</h4><span class="shot-pill">隧道黑場</span><span class="shot-pill">Eismeer 觀景窗</span><span class="shot-pill">Sphinx 雪原</span><span class="shot-pill">阿萊奇冰川</span>
       </div>
     </article>
 
@@ -2000,7 +1832,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>文化</h4><p>1816 火山冬災後 Brienz 居民開始<strong>冬季木雕經濟</strong>，至 1860 年代已成為瑞士木雕首都，作品輸出至英、法、俄、美。<strong>瑞士木雕學校（Schnitzlerschule, 1884）</strong>仍在運作，是歐洲唯一專業木雕職業學校。19 世紀末木雕熊（Brienz Bear）成為瑞士觀光禮品的代表符號。</p>
         <h4>歷史交通</h4><p><strong>1892 年 Brienz-Rothorn Bahn 蒸汽齒軌鐵路</strong>啟用，至今仍以蒸汽火車運作，是瑞士唯一仍燃煤的齒軌鐵路。<strong>BLS 湖船 1839 起航行</strong>，現役 <strong>Lötschberg 號（1914 蒸汽明輪船）</strong>仍每日往返 Interlaken Ost ↔ Brienz。</p>
         <h4>科學</h4><p>湖水溫度全年 4–8°C（深層）至 18°C（夏季表層），低於 Lake Geneva 6–8°C。冰川岩粉含量導致<strong>光衰減常數較高</strong>，可見光僅穿透 1–2m，是天然防曬與抗氧化的水文現象。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">翡翠湖面</span><span class="shot-pill">木雕熊</span><span class="shot-pill">Rothorn 蒸汽車</span><span class="shot-pill">Giessbach 14 段瀑布</span>
+        <h4>拍攝素材</h4><span class="shot-pill">翡翠湖面</span><span class="shot-pill">木雕熊</span><span class="shot-pill">Rothorn 蒸汽車</span><span class="shot-pill">Giessbach 14 段瀑布</span>
       </div>
     </article>
 
@@ -2012,7 +1844,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>歷史</h4><p>1191 年由 <strong>Zähringen 家族 Berchtold V</strong> 創立，名稱據說來自首獵之熊。1353 加入瑞士邦聯；<strong>1848 瑞士聯邦憲法確立伯恩為聯邦首都</strong>，今天聯邦議會（Bundeshaus）、瑞士國家銀行、最高法院皆設於此。</p>
         <h4>科學史</h4><p><strong>1902–1909 愛因斯坦居於 Kramgasse 49 號 2 樓</strong>，於瑞士聯邦專利局任 III 級審查員。1905 年他在此完成<strong>「奇蹟年」四篇論文</strong>：光電效應（諾貝爾獎依據）、布朗運動、狹義相對論、E=mc²。今天該公寓為愛因斯坦故居博物館。</p>
         <h4>時間制度</h4><p><strong>Zytglogge 鐘樓</strong>建於 1218 年，1530 年安裝天文鐘，整點前 4 分鐘啟動木偶劇——這是<strong>歐洲現存最古老仍在運作的天文機械鐘之一</strong>，也是愛因斯坦相對論發想時凝視的鐘。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Bundeshaus 26 邦噴泉</span><span class="shot-pill">Kramgasse 49</span><span class="shot-pill">Zytglogge 整點</span><span class="shot-pill">Aare 河環抱俯瞰</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Bundeshaus 26 邦噴泉</span><span class="shot-pill">Kramgasse 49</span><span class="shot-pill">Zytglogge 整點</span><span class="shot-pill">Aare 河環抱俯瞰</span>
       </div>
     </article>
 
@@ -2024,7 +1856,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>宗教改革</h4><p>1519 年 <strong>Huldrych Zwingli</strong>（茲文利）在 Grossmünster 大教堂展開瑞士德語區宗教改革，主張<strong>聖經唯一權威、廢除聖像</strong>，影響後來加爾文派發展。Grossmünster 雙塔今仍為城市天際線地標。</p>
         <h4>現代藝術</h4><p>1916 年 <strong>Cabaret Voltaire</strong>（Spiegelgasse 1）由 Hugo Ball、Tristan Tzara 等人創立，<strong>達達主義（Dadaism）誕生地</strong>，反第一次世界大戰、反藝術建制，深刻影響後來超現實主義與當代行為藝術。</p>
         <h4>科學／金融</h4><p><strong>蘇黎世聯邦理工（ETH Zürich）1855 年創立</strong>，孕育 21 位諾貝爾獎得主（含愛因斯坦 1900 畢業）。Paradeplatz 是瑞銀（UBS）與瑞士信貸（昔）總部所在，<strong>Bahnhofstrasse 下方藏有全球第二大金庫網絡</strong>。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Lindenhof 俯瞰</span><span class="shot-pill">Grossmünster 雙塔</span><span class="shot-pill">Spiegelgasse 1</span><span class="shot-pill">Bahnhofstrasse 夜景</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Lindenhof 俯瞰</span><span class="shot-pill">Grossmünster 雙塔</span><span class="shot-pill">Spiegelgasse 1</span><span class="shot-pill">Bahnhofstrasse 夜景</span>
       </div>
     </article>
 
@@ -2036,7 +1868,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>歷史地標</h4><p><strong>Kapellbrücke（卡佩爾木橋，1333）</strong>是歐洲最古老的木製有頂橋，橋頂三角板原繪有 158 幅 17 世紀油畫；1993 火災後重建，現存 47 幅原作。<strong>獅子紀念碑（1820）</strong>紀念 1792 巴黎杜樂麗宮為法王路易十六戰死的 786 名瑞士衛兵，<strong>馬克吐溫稱之為「世界上最哀傷、最動人的石雕」</strong>。</p>
         <h4>音樂史</h4><p><strong>Richard Wagner 1866–1872 居於 Tribschen 半島</strong>，在此完成《齊格飛》、《紐倫堡的名歌手》與《齊格飛牧歌》——後者作為妻子 Cosima 生日禮物在 Tribschen 階梯上首演。Tribschen 今為 Wagner 博物館。</p>
         <h4>觀光工業史</h4><p><strong>Mt. Rigi 1871 vitznau-rigi 齒軌鐵路</strong>是<strong>歐洲第一條登山齒軌鐵路</strong>，由 Niklaus Riggenbach 設計，奠定瑞士山地觀光工業基礎。SGV 蒸汽船船隊（最古現役 1901 Uri 號、1928 Stadt Luzern）仍每日航行。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Kapellbrücke 三角板</span><span class="shot-pill">獅子紀念碑</span><span class="shot-pill">Vitznau 齒軌</span><span class="shot-pill">SGV 明輪</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Kapellbrücke 三角板</span><span class="shot-pill">獅子紀念碑</span><span class="shot-pill">Vitznau 齒軌</span><span class="shot-pill">SGV 明輪</span>
       </div>
     </article>
 
@@ -2047,7 +1879,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>建築史</h4><p>1910 年由 <strong>August Vogt</strong> 設計、Tito Carlevaro 雕飾的 <strong>Jugendstil / Art Nouveau 大旅館</strong>，落成於 Belle Époque 黃金時期最末段；其雕花石膏天花、彩色玻璃、楓木與胡桃木鑲嵌牆面，是<strong>瑞士境內保存最完整的 Art Nouveau 室內</strong>之一。同期同向風格代表：巴黎 Métro 入口（1900）、布魯塞爾 Maison & Atelier Horta（1898）。</p>
         <h4>科技</h4><p>1910 年同步啟用 <strong>「Hotel Montana Drahtseilbahn」</strong>——從 Haldenstrasse 湖畔站直上山丘飯店，傾斜長度 110 公尺、爬升高差 35 公尺；<strong>住客全程免費搭乘</strong>，是世界少數仍為飯店專用的私人 funicular。</p>
         <h4>文化</h4><p>位於 Adligenswil 山丘的 <strong>Drei-Linden（三棵菩提樹）</strong>台地，傳統為琉森貴族郊外宴會地。20 世紀中期是 Sophia Loren、Audrey Hepburn 等好萊塢明星訪琉森的常宿；今天為 <strong>Reuter 家族第三代</strong>經營，是<strong>瑞士少見仍由創辦家族擁有的歷史飯店</strong>。米其林 17 分的 SCALA Ristorante 為館內地中海料理代表。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Drahtseilbahn 升降</span><span class="shot-pill">Art Nouveau 立面</span><span class="shot-pill">湖面 Pilatus 全景</span><span class="shot-pill">SCALA 露台</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Drahtseilbahn 升降</span><span class="shot-pill">Art Nouveau 立面</span><span class="shot-pill">湖面 Pilatus 全景</span><span class="shot-pill">SCALA 露台</span>
       </div>
     </article>
 
@@ -2058,7 +1890,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <h4>歷史</h4><p>1948 年於 Kloten 啟用，取代 Dübendorf 軍民共用機場。1953 年首條跨大西洋航線（蘇黎世─紐約）通航。1980 年代擴建為三條跑道結構。</p>
         <h4>建築／科技</h4><p><strong>2003 年 Skymetro</strong>（無人駕駛地下接駁列車，1.1 km）連接 Terminal A 與遠端 E 大廳，是瑞士機場運轉效率象徵。<strong>2020 年 The Circle</strong> 開幕——日本建築師 Riken Yamamoto 設計、總投資 11 億瑞郎，是<strong>機場直結式商辦複合體（aerotropolis）</strong>的歐洲樣板，含 USZ 蘇黎世大學附醫的滿星級健檢中心。</p>
         <h4>退稅與離境</h4><p>瑞士不在歐盟內，但<strong>退稅辦理在最後一個歐盟／瑞士離境機場</strong>。LX/BA/EY 旅客若經杜哈、阿布達比、伊斯坦堡轉機，瑞士退稅章（Global Blue / Planet）必須於 ZRH 蓋章後，發貨人才會退款。</p>
-        <h4>影像／直播鉤子</h4><span class="shot-pill">Skymetro 黑暗隧道</span><span class="shot-pill">The Circle 廣場</span><span class="shot-pill">退稅櫃台</span><span class="shot-pill">SBB 月台直結</span>
+        <h4>拍攝素材</h4><span class="shot-pill">Skymetro 黑暗隧道</span><span class="shot-pill">The Circle 廣場</span><span class="shot-pill">退稅櫃台</span><span class="shot-pill">SBB 月台直結</span>
       </div>
     </article>
 
@@ -2271,7 +2103,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
 
     <div class="note info" style="margin-top: 16px;">
       <span class="label">💎 回程 D8 Business Comfort 價值</span>
-      LX 340 回程升 Biz Comfort 比 Eco Light 多 ~GBP 130，但內含 <strong>ZRH Lounge（價值 CHF 60+）+ Fast Lane Security + Onboard 熱餐（CHF 30+）+ Empty middle seat 休息空間</strong>。換算淨溢價約 GBP 55，是為 6/10 EY62 19h 跨洲飛行的「最後抗老處方執行點」。詳見 D8 timeline。
+      LX 340 回程升 Biz Comfort 比 Eco Light 多 ~GBP 130，但內含 <strong>ZRH Lounge（價值 CHF 60+）+ Fast Lane Security + Onboard 熱餐（CHF 30+）+ Empty middle seat 休息空間</strong>。換算淨溢價約 GBP 55，是為 6/10 EY62 19h 跨洲飛行的「最後休息調整點」。詳見 D8 timeline。
     </div>
 
     <div class="note info" style="margin-top: 16px;">
@@ -2292,8 +2124,8 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <div class="hh-en">Cinematic Flight Recording Strategy</div>
       </header>
       <div class="body">
-        <h5>ACT I: 啟程 (DAWN) ─ NAD+ 與粒線體充能</h5>
-        <p><strong>對應航班：去程 EY61 / LX355</strong>。此段為「Mitochondrial Odyssey」的首部曲。在機艙內捕捉清晨第一道穿透雲層的曙光（The first light breaking through），隱喻 NAD+ 的甦醒與跨越時區的能量重置。拍攝重點：機窗外的日出雲海、航廈內輕快充滿動能的步伐，對應 <strong>Upbeat Electropop</strong> 曲風。</p>
+        <h5>ACT I: 啟程 (DAWN) ─ 時差調整 與粒線體充能</h5>
+        <p><strong>對應航班：去程 EY61 / LX355</strong>。此段為「Mitochondrial Odyssey」的首部曲。在機艙內捕捉清晨第一道穿透雲層的曙光（The first light breaking through），隱喻 時差調整 的甦醒與跨越時區的能量重置。拍攝重點：機窗外的日出雲海、航廈內輕快充滿動能的步伐，對應 <strong>Upbeat Electropop</strong> 曲風。</p>
         
         <h5 style="margin-top:16px;">ACT IV: 永恆 (THE STARS) ─ 表觀遺傳時鐘重置</h5>
         <p><strong>對應航班：回程 LX340 Business Comfort / 跨洲夜間飛行</strong>。此段為「The Epigenetic Reset」的最終章。利用商務艙寧靜的私人空間（Empty middle seat），捕捉夜空中的星光與平穩的夜航航線。隱喻旅程結束時，時間彷彿靜止，生理時鐘完成完美重置（Age is no longer a one-way trip），對應 <strong>Cinematic Synthwave</strong> 靜謐曲風。</p>
@@ -2452,7 +2284,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
   <div class="container narrow">
     <div class="section-head">
       <div class="num sans">ENVIRONMENTAL MEDICINE</div>
-      <h2>雷納德效應與微氣候醫學機制</h2>
+      <h2>雷納德效應與微氣候機制</h2>
       <div class="lead sans">本旅程不只是觀光。基於環境醫學文獻的兩個核心機制——<strong>雷納德效應（Lenard Effect）</strong>與<strong>環境激物效應（Hormesis）</strong>——構成了住宿節點選擇的科學依據。</div>
     </div>
 
@@ -2485,156 +2317,51 @@ footer .meta-info { opacity: .6; font-size: 12px; }
       <div class="strategy-card">
         <div class="icon-block">❄️</div>
         <h3>冷暴露與棕色脂肪活化</h3>
-        <p class="sans">冷暴露（5–15°C、&gt; 2 分鐘）刺激<strong>棕色脂肪組織（BAT）UCP1 蛋白</strong>解偶聯熱生成、活化 PGC-1α 與粒線體新生，並釋放 norepinephrine 改善胰島素敏感性與發炎指標。<strong>Lake Geneva 湖水（晨間 12–15°C）、Lake Brienz 翡翠湖（10–13°C）、Lake Lucerne（11–14°C）、Mürren 晨間山風（6–10°C）</strong>提供四層強度的天然冷源；D1 Trois Couronnes Spa 冷暖交替浴、D6 晨間 Lake Lucerne 浸足 5 分鐘是最低門檻、最高 CP 值的執行方式，並可同步提升<strong>褐脂肪 → 米色脂肪轉化</strong>的長期代謝紅利。</p>
+        <p class="sans">冷暴露（5–15°C、&gt; 2 分鐘）刺激<strong>棕色脂肪組織（冷水恢復）UCP1 蛋白</strong>解偶聯熱生成、活化 PGC-1α 與粒線體新生，並釋放 norepinephrine 改善胰島素敏感性與發炎指標。<strong>Lake Geneva 湖水（晨間 12–15°C）、Lake Brienz 翡翠湖（10–13°C）、Lake Lucerne（11–14°C）、Mürren 晨間山風（6–10°C）</strong>提供四層強度的天然冷源；D1 Trois Couronnes Spa 冷暖交替浴、D6 晨間 Lake Lucerne 浸足 5 分鐘是最低門檻、最高 CP 值的執行方式，並可同步提升<strong>褐脂肪 → 米色脂肪轉化</strong>的長期代謝紅利。</p>
       </div>
     </div>
 
     <div style="margin-top: 28px;">
       <div class="note info">
-        <span class="label">醫師視角的設計邏輯</span>
-        本案設計刻意納入「<strong>單次強消耗 → 長時間強恢復</strong>」結構：D3 Schilthorn 2,970m 與 D4 上午 Jungfraujoch 3,454m 集中於 24 小時內的高海拔負載；D4 午後立即下撤至 Brienz 566m 湖區開始為期 5 天的湖畔恢復。對醫師或科普作者而言，這趟行程更適合作為「環境如何改變感官與節律」的旅行觀察，而非療效承諾。
+        <span class="label">旅人視角的設計邏輯</span>
+        本案設計刻意納入「<strong>單次強消耗 → 長時間強恢復</strong>」結構：D3 Schilthorn 2,970m 與 D4 上午 Jungfraujoch 3,454m 集中於 24 小時內的高海拔負載；D4 午後立即下撤至 Brienz 566m 湖區開始為期 5 天的湖畔恢復。對旅人或科普作者而言，這趟行程更適合作為「環境如何改變感官與節律」的旅行觀察，而非療效承諾。
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ ANTI-AGING MEDICINE ============ -->
-<section id="antiaging" class="alt">
+<!-- ============ TRAVEL RECOVERY RHYTHM ============ -->
+<section id="recovery" class="alt">
   <div class="container wide">
     <div class="section-head">
-      <div class="num sans" style="color:var(--gold);">LONGEVITY MEDICINE</div>
-      <h2>抗老醫學　·　八日行程啟動的六大機轉</h2>
-      <div class="lead sans">本路線不是隨機觀光，而是一份<strong>環境式抗老處方</strong>。海拔波動、瀑布負離子、冷暴露、晝夜節律重置、地中海─阿爾卑斯飲食、社交孤立的脫離——這些變數正好對應 2020 年後 longevity 研究界最被驗證的六條抗老路徑。</div>
+      <div class="num sans" style="color:var(--gold);">RECOVERY RHYTHM</div>
+      <h2>旅行恢復節奏　·　湖泊、山岳與城市步調</h2>
+      <div class="lead sans">這段路線把高山停留、湖畔慢行、景觀列車與飯店休息交錯安排。公開版僅保留旅行節奏與安全提醒，不提供醫療建議、療效承諾或私人營運內容。</div>
     </div>
 
-    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:24px;">① 六大抗老機轉與本案對照</h3>
+    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:24px;">① 八日節奏設計</h3>
     <table class="std-table">
-      <thead><tr><th>機轉</th><th>分子層級</th><th>本案啟動方式</th></tr></thead>
+      <thead><tr><th>階段</th><th>地點</th><th>公開版建議</th></tr></thead>
       <tbody>
-        <tr><td><strong>Hormesis 激物效應</strong></td><td>單次高劑量壓力 → 適應反應 → 細胞韌性</td><td>湖上 → 1 晚 Mürren 1,638m → 3,454m → 湖上，單次完整 GAS 循環</td></tr>
-        <tr><td><strong>粒線體新生</strong></td><td>PGC-1α / TFAM 活化 → mtDNA 複製</td><td>D3 Schilthorn 2,970m、D4 上午 Jungfraujoch 3,454m 24h 集中缺氧</td></tr>
-        <tr><td><strong>Autophagy 自噬</strong></td><td>mTOR 抑制 → LC3-II 上升 → 損傷蛋白清除</td><td>間歇進食（早餐 9:00 → 晚餐 19:00）＋海拔缺氧雙重觸發</td></tr>
-        <tr><td><strong>NAD+ / Sirtuins</strong></td><td>SIRT1 / SIRT3 活化 → DNA 修復、代謝改善</td><td>規律晨光暴露（Vevey 東向）、睡眠先行、Lavaux 紅酒少量 Resveratrol</td></tr>
-        <tr><td><strong>端粒保存</strong></td><td>慢性壓力 ↓ → telomerase 活性 ↑</td><td>5 晚湖畔副交感主導、無車 Mürren、教堂鐘聲環境</td></tr>
-        <tr><td><strong>迷走神經張力</strong></td><td>HRV 上升 → 抗發炎、抗心律不整</td><td>三大湖負離子、冷湖水暴露、慢呼吸登山節奏</td></tr>
+        <tr><td>D1-D2</td><td>Geneva / Vevey / Lavaux / Rolle</td><td>抵達後以湖畔散步、早睡與葡萄園步道建立時差緩衝。</td></tr>
+        <tr><td>D3-D4</td><td>Murren / Schilthorn / Jungfraujoch / Brienz</td><td>山岳日保留彈性，依天氣、能見度與身體狀態決定停留時間；高海拔景點以短停、補水、保暖為原則。</td></tr>
+        <tr><td>D5-D6</td><td>Lake Brienz / Lucerne / Rigi</td><td>用湖船、博物館、舊城與湖畔飯店降低移動壓力，讓行程從高山切回城市與水域節奏。</td></tr>
+        <tr><td>D7-D8</td><td>Bern / Zurich / London Heathrow</td><td>最後兩天以城市步行、退稅、機場銜接與長途飛行準備為主，避免塞入過多新景點。</td></tr>
       </tbody>
     </table>
 
-    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:32px;">② 海拔劑量─反應表（Altitude Dose-Response）</h3>
-    <table class="std-table compact">
-      <thead><tr><th>海拔區間</th><th>生理反應</th><th>本案對應點</th></tr></thead>
-      <tbody>
-        <tr><td>0 – 800 m</td><td>基線；無顯著缺氧反應</td><td>Vevey 385m、Rolle 375m、Brienz 566m、Lucerne 436m、Zurich 408m、Bern 540m</td></tr>
-        <tr><td>800 – 1,500 m</td><td>輕度 EPO 誘導；睡眠品質可能微改善</td><td>Lauterbrunnen 800m（途經）、Rigi Kulm 1,797m 短停</td></tr>
-        <tr><td>1,500 – 2,500 m</td><td>HIF-1α 顯著活化；輕度紅血球生成</td><td><strong>Mürren 1,638m（N3 唯一山內夜）</strong>、Mt. Rigi 1,797m</td></tr>
-        <tr><td>2,500 – 3,500 m</td><td>顯著紅血球生成；氧化壓力上升；急性高山症風險低度</td><td>Schilthorn 2,970m（D3 下午）</td></tr>
-        <tr><td><strong>3,500 m+</strong></td><td><strong>顯著急性低氧；SpO₂ 可降至 85% 以下；停留時間建議 &lt; 2 小時</strong></td><td>Jungfraujoch 3,454m、Sphinx 3,571m（D4 上午）</td></tr>
-      </tbody>
-    </table>
-    <div class="note warn" style="margin-top:16px;">
-      <span class="label">安全注意</span>
-      Jungfraujoch 為國際登山醫學會（ISMM）認可的「即達高度」風險點。<strong>本案 N3 Mürren 1,638m 即作為前夜「適應海拔」緩衝</strong>，使 D4 Jungfraujoch 上攻時擁有 16+ 小時的中海拔睡眠適應。攜帶可攜式 SpO₂ 偵測器，若 SpO₂ &lt; 80% 或出現劇烈頭痛應立即下撤。Diamox 預防性使用須事先評估腎功能與磺胺類過敏史。
-    </div>
-
-    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:32px;">③ 八日抗老處方時程（湖上 ⇄ 山內）</h3>
-    <table class="std-table">
-      <thead><tr><th>日次</th><th>抗老焦點</th><th>具體執行</th></tr></thead>
-      <tbody>
-        <tr><td><strong>D1 6/2</strong></td><td>時差重置 × Spa 副交感啟動 × <strong>NAD+ 晨補</strong></td><td>抵 Vevey Trois Couronnes Spa 冷暖交替浴（3min 冷 / 5min 暖 × 3 輪），晚 21:00 前入睡；Lake Geneva 黃昏湖面負離子。<strong>NAD+ 抗時差協議</strong>：D2/D3 起每日 08:00–09:00 服 NMN 250-500mg / Niagen，配晨光暴露，強制校準 SIRT1 基因時鐘——可將跨洲 Jetlag 縮短至 24-48 小時內</td></tr>
-        <tr><td><strong>D2 6/3</strong></td><td>森林浴 × 紫外線 × Resveratrol</td><td>Lavaux UNESCO 葡萄園縱走 6.5km（α-pinene 吸入 2-3 小時）；正午前 10 分前臂日曬補 D；晚餐 Chasselas 白酒少量 Resveratrol（200ml）</td></tr>
-        <tr><td><strong>D3 6/4</strong></td><td>中度缺氧 × 粒線體誘導 × <strong>登頂前 Hyper-hydration</strong></td><td><strong>Schilthornbahn 上山前 1-2 小時（13:00 抵 Mürren 後）飲 500-800ml Valser 含鎂礦泉水</strong>（Mg²⁺ 約 95mg/L），確保血液體積充足→粒線體面臨「正向 Hormesis 低氧」而非「脫水病理性 AMS」。<strong>Schilthorn 2,970m 停留 60–90 分鐘</strong>，Piz Gloria 用餐刺激低氧下消化反應</td></tr>
-        <tr><td><strong>D4 6/5</strong></td><td><strong>最大缺氧負荷 × 下撤 × BAT + Wim Hof</strong></td><td>晨間 Mürren 06:30 再補 500ml Valser 鎂水；<strong>Jungfraujoch 3,454m 停留 ≤ 90 分鐘</strong>（佩戴抗 UV 墨鏡保護黃斑部），下午下撤至 Brienz 566m 翡翠湖。<strong>浸足前 Wim Hof 呼吸法 3 輪</strong>（30 次深呼吸 → 屏息 30s → 4 次深吸氣）→ 入 10-14°C 冰川融水 5 分鐘→ 強制副交感主導，BAT 米色脂肪轉化最大化</td></tr>
-        <tr><td><strong>D5 6/6</strong></td><td>水域恢復 × 副交感深化 × <strong>Natural PBM 紅光凝視</strong></td><td>Lake Brienz 蒸汽船 70 分（湖面負離子）；下午 Hotel Montana Drahtseilbahn 古纜車登 Art Nouveau 山丘飯店。<strong>Drei-Linden 露台 19:30-20:00（日落前 60-90 分）無墨鏡 15-20 分鐘湖面長波紅光 / NIR 凝視 + 前臂皮膚暴露</strong>——對應你診所 PBM 紅光臨床概念的自然版本，促進視網膜 OPN3、皮膚粒線體 cytochrome c oxidase 活化、夜間褪黑激素分泌</td></tr>
-        <tr><td><strong>D6 6/7</strong></td><td>離心收縮 × 古蹟徒步 × <strong>PBM 晨光</strong></td><td><strong>晨 06:00-07:00 Lake Lucerne 湖畔 15 分日出紅光凝視 + 浸足</strong>；Mt. Rigi Kulm 1,797m 齒軌登頂後步行下山一段（離心收縮訓練）；移宿 Schweizerhof 湖畔。傍晚 Schweizerhofquai 湖畔再做一次 20 分 NIR 凝視</td></tr>
-        <tr><td><strong>D7 6/8</strong></td><td>恢復 × 城市步行</td><td>Bern 舊城 2.5 小時步行（鵝卵石不平地面 → 本體感受覺刺激）；Zurich 入住 Widder，高蛋白晚餐（鴨胸 / 牛排 + 蔬菜，無精緻碳水）</td></tr>
-        <tr><td><strong>D8 6/9</strong></td><td>過渡 × 抗血栓</td><td>Zurich Bahnhofstrasse 採購＋ETH 校園步行；返程 LHR 飛行注意 30 分起立活動、<strong>20-25 mmHg 抗血栓襪</strong>、每 60 分 500ml 水、避免酒精咖啡因</td></tr>
-      </tbody>
-    </table>
-
-    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:32px;">④ 阿爾卑斯飲食的抗老成分</h3>
+    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:32px;">② 高山與湖區安全提醒</h3>
     <div class="hotel-deep-grid">
-      <div class="hotel-deep"><div class="role">DAIRY</div><h4>阿爾卑斯起司</h4><p>Gruyère、Emmental、Sbrinz 含<strong>共軛亞麻油酸（CLA）</strong>與<strong>維生素 K2（MK-4）</strong>，源自高山牧草飼育，抑制血管鈣化與骨質流失。</p></div>
-      <div class="hotel-deep"><div class="role">POLYPHENOLS</div><h4>瑞士黑巧克力</h4><p>70% + 可可富含<strong>表兒茶素（epicatechin）</strong>，活化粒線體 NO 路徑、改善內皮功能。建議下午 30g 為上限。</p></div>
-      <div class="hotel-deep"><div class="role">CARB TIMING</div><h4>Rösti / Älplermagronen</h4><p>高碳排在午餐，補充山行肝醣；晚餐回到低碳 + 高蛋白（牛肉、湖魚 Felchen），維持夜間 mTOR 抑制窗口。</p></div>
-      <div class="hotel-deep"><div class="role">OMEGA-3</div><h4>湖魚（Felchen / Forelle）</h4><p>Lake Lucerne、Lake Brienz 冷水湖魚富含 EPA / DHA，抗發炎、降低三酸甘油酯。</p></div>
-      <div class="hotel-deep"><div class="role">MINERAL</div><h4>阿爾卑斯礦泉水</h4><p>Valser、Adelboden 礦泉富含鎂（Mg²⁺ 80–120 mg/L），輔助 mTOR 抑制與睡眠品質。</p></div>
-      <div class="hotel-deep"><div class="role">FERMENT</div><h4>瑞士優酪與發酵</h4><p>Bircher Müesli 結合 oat β-glucan + 發酵乳酸菌，改善腸道屏障與短鏈脂肪酸生成。</p></div>
+      <div class="hotel-deep"><div class="role">ALTITUDE</div><h4>高海拔短停</h4><p>Schilthorn 與 Jungfraujoch 屬高山環境，請確認天氣、纜車狀態與自身狀況。若出現不適，優先下撤至低海拔城鎮。</p></div>
+      <div class="hotel-deep"><div class="role">HYDRATION</div><h4>補水與保暖</h4><p>山頂與列車移動日容易乾燥，建議隨身帶水、薄外套、墨鏡與簡單點心，避免把午餐與休息時間壓得太緊。</p></div>
+      <div class="hotel-deep"><div class="role">LIGHT</div><h4>晨昏光線</h4><p>湖畔晨昏適合散步與拍照；強光、雪地與高山平台請配戴抗 UV 墨鏡，不直視太陽。</p></div>
+      <div class="hotel-deep"><div class="role">SLEEP</div><h4>睡眠緩衝</h4><p>跨洲抵達後前兩晚避免排滿晚間活動；高山日後安排湖區住宿，有助於降低行程疲勞感。</p></div>
     </div>
 
-    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:32px;">⑤ 睡眠與恢復　·　湖上山內雙軸的睡眠紅利</h3>
-    <table class="std-table compact">
-      <thead><tr><th>夜次</th><th>飯店海拔</th><th>睡眠生理預期</th></tr></thead>
-      <tbody>
-        <tr><td>N1 Vevey</td><td>385 m</td><td>跨時區抵達後 Spa 助眠；Trois Couronnes 湖面白噪音深睡</td></tr>
-        <tr><td>N2 Rolle</td><td>375 m</td><td>第二晚適應時差，葡萄園無光害環境深睡反彈</td></tr>
-        <tr><td><strong>N3 Mürren</strong></td><td><strong>1,638 m</strong></td><td><strong>唯一山內夜</strong>；輕度週期性呼吸可能出現；HRV 短暫下降；屬「適應海拔」設計</td></tr>
-        <tr><td>N4 Brienz</td><td>566 m</td><td>下山後副交感深化；Lake Brienz 翡翠湖風助眠</td></tr>
-        <tr><td>N5 Lucerne (Hotel Montana)</td><td>~530 m</td><td>山丘微高度 + Pilatus 山風，Art Nouveau 木質環境深睡</td></tr>
-        <tr><td>N6 Lucerne (Schweizerhof)</td><td>436 m</td><td>湖畔深睡；Mt. Pilatus 正向睡前光譜</td></tr>
-        <tr><td>N7 Zurich</td><td>408 m</td><td>低海拔深睡反彈（rebound deep sleep），完成全程恢復</td></tr>
-        <tr><td>N8 LHR</td><td>—</td><td>機場過境夜；返台前完成最後一段時差預適應</td></tr>
-      </tbody>
-    </table>
-    <div class="note info" style="margin-top:16px;">
-      <span class="label">膠淋巴系統（Glymphatic System）</span>
-      2013 年 Nedergaard 團隊揭示：深睡期腦組織間隙擴大 60%，腦脊髓液沖洗 β-amyloid 與代謝廢物的速率較清醒時提高 10 倍以上。本案 8 夜中<strong>7 夜為 400–600m 湖城低海拔（睡眠最有利區間）</strong>，僅 N3 Mürren 一夜中海拔挑戰；湖城七夜的深睡反彈足以代償山內一夜的睡眠擾動，是本案不犧牲腦部廢物清除的關鍵設計。
+    <div class="note info" style="margin-top:24px;">
+      <span class="label">公開版說明</span>
+      本段內容是一般旅行節奏與安全提醒，不能取代個人醫療建議。若有慢性疾病、懷孕、近期手術或高海拔旅行疑慮，請於出發前諮詢合格醫療專業人員。
     </div>
-
-    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:32px;">⑥ 四項精準執行協議（Clinical-grade Protocols）</h3>
-    <p class="sans" style="font-size:14px;color:var(--ink-soft);line-height:1.8;">在六大機轉框架下，下列四項是<strong>本案旅程獨有的精準執行細節</strong>，將「理論機轉」轉為「逐分鐘的操作 SOP」，使醫師專業視角下的環境式抗老從敘事變成可量化的臨床實踐。</p>
-    <div class="hotel-deep-grid" style="margin-top:16px;">
-      <div class="hotel-deep">
-        <div class="role">PROTOCOL 1</div>
-        <h4>🌅 Natural PBM 紅光凝視</h4>
-        <p><strong>原理</strong>：可見光紅段（630-700nm）與近紅外（NIR, 700-1000nm）穿透眼睛與皮膚，活化視網膜 OPN3 / 皮膚 cytochrome c oxidase / 粒線體 ATP 合成。診所 PBM 紅光療法的「自然版」就是<strong>日落前 60-90 分</strong>湖面散射長波光。<br><strong>執行</strong>：D5 Hotel Montana Drei-Linden 露台 19:30-20:00、D6 Lake Lucerne 湖畔晨 06:00 + 傍晚，<strong>無墨鏡 15-20 分鐘凝視湖面 + 前臂皮膚暴露</strong>。促夜間褪黑激素分泌。<br><strong>禁忌</strong>：3,454m Jungfraujoch 必須戴抗 UV 墨鏡保護黃斑部，PBM 只在湖區做。</p>
-      </div>
-      <div class="hotel-deep">
-        <div class="role">PROTOCOL 2</div>
-        <h4>💧 登頂前 Hyper-hydration（Valser 鎂水）</h4>
-        <p><strong>原理</strong>：高海拔最大隱性負擔不是缺氧，是<strong>極度乾燥引發血液濃縮 + 微血管血栓</strong>。充足血液體積使粒線體面臨「正向 Hormesis 低氧」而非脫水病理性 AMS。<br><strong>執行</strong>：<br>① D3 Mürren 抵達 13:00 → 上 Schilthorn 前 500-800ml <strong>Valser</strong>（Mg²⁺ 約 95mg/L）<br>② D4 Mürren 早餐 06:30 → 上 Jungfraujoch 前再 500ml<br>③ 全程避免咖啡因 + 酒精（兩者均利尿）<br>④ 山頂每 30 分小口飲水<br><strong>劑量</strong>：總飲水 D3 ≥ 2.5L、D4 ≥ 3L。</p>
-      </div>
-      <div class="hotel-deep">
-        <div class="role">PROTOCOL 3</div>
-        <h4>❄️ BAT 冷暴露 + Wim Hof 呼吸</h4>
-        <p><strong>原理</strong>：單純冷水浸足只激活淺層 BAT。<strong>先 Wim Hof 呼吸激發交感、入水後強制副交感切換</strong>，使迷走神經張力深度重啟、norepinephrine 大量釋放、抗發炎細胞因子上升。<br><strong>執行</strong>：D4 傍晚 Brienz 翡翠湖邊 10-14°C 冰川融水<br>① <strong>Wim Hof 3 輪</strong>：30 次深呼吸 → 屏息 30s（呼氣末）→ 4 次深吸氣<br>② 浸足 5 分鐘（不抖、不縮腳，慢呼吸）<br>③ 出水後 4-7-8 呼吸 3 輪收尾<br>④ 30 分內進熱餐（魚 / 起司）給 BAT 燃料<br><strong>變體</strong>：D6 Lake Lucerne 晨間重做一次，鞏固記憶效應。</p>
-      </div>
-      <div class="hotel-deep">
-        <div class="role">PROTOCOL 4</div>
-        <h4>🧬 NAD+ 抗時差節律</h4>
-        <p><strong>原理</strong>：跨洲長途飛行打亂 SIRT1 - PER2 - BMAL1 晝夜節律基因軸，傳統 Jetlag 恢復需 7-10 天。<strong>NAD+ 前驅物 + 晨光暴露</strong>可在分子層校準時鐘基因，把恢復縮短至 24-48 小時。<br><strong>執行</strong>：<br>① 行前 7 天起每日 NMN 250-500mg 早餐後<br>② D1-D3 早晨 08:00-09:00 服 NMN + 立即<strong>無墨鏡晨光暴露 10-15 分</strong>（Vevey / Rolle 湖畔）<br>③ 晚上 22:00 後絕對避免藍光（飯店 dim mode）<br>④ 配合褪黑激素 0.3-1mg 入睡前 30 分（D1 必，D2-D3 視 Oura sleep score）<br><strong>注意</strong>：NMN 須行前評估腎功能、避免同時服 Resveratrol（爭議）。</p>
-      </div>
-    </div>
-
-    <h3 style="font-family:'Noto Serif TC',serif;color:var(--swiss-deep);margin-top:32px;">⑦ 醫師自我監測指標</h3>
-    <table class="std-table">
-      <thead><tr><th>指標</th><th>工具</th><th>關鍵閾值</th></tr></thead>
-      <tbody>
-        <tr><td>SpO₂（血氧飽和度）</td><td>指夾式或 Apple Watch Series 6+</td><td>&gt; 88% 安全；&lt; 80% 立即下撤</td></tr>
-        <tr><td>HRV（心率變異）</td><td>Whoop / Garmin / Oura Ring</td><td>較基線 -20% 提示交感過載，需減量</td></tr>
-        <tr><td>RHR（靜息心率）</td><td>同上</td><td>較基線 +10 bpm 提示恢復不足</td></tr>
-        <tr><td>Sleep Score</td><td>Oura / Whoop / Garmin</td><td>連續兩晚 &lt; 70 應主動降低翌日強度</td></tr>
-        <tr><td>體重 + 水合</td><td>飯店體重計 + 尿色卡</td><td>單日 &gt; 1.5kg 下降提示脫水</td></tr>
-        <tr><td>主觀疲勞量表（RPE）</td><td>Borg 6–20 量表</td><td>每日山行 ≤ 15，否則改保留行程</td></tr>
-      </tbody>
-    </table>
-
-    <div class="note warn" style="margin-top:24px;">
-      <span class="label">免責聲明</span>
-      上述為<strong>環境醫學科普整理</strong>，非個人醫療建議。讀者若有心血管疾病、慢性肺病、孕娠、未控制高血壓、近期外科手術史、攜帶心律調節器者，<strong>請於行前由主治醫師完成評估</strong>。<br><strong>四項協議特別注意</strong>：① NAD+ / NMN / Diamox / Resveratrol / Rapamycin 等補劑須個別風險評估與腎肝功能基線；② Wim Hof 呼吸法<strong>絕不可在水中執行</strong>（有溺水風險），僅在岸上做；③ 高海拔暴露對於孕婦、未控制高血壓、近期心血管事件者為禁忌；④ Hyper-hydration 對於有心衰、低鈉血症傾向者須減量；⑤ Natural PBM 紅光凝視不可超過日落前 30 分鐘以內或日出後 30 分鐘以後的時段（避免直視太陽損傷視網膜）。
-    </div>
-
-    <!-- ============ O2O CLINIC CTA ============ -->
-    <div class="cta-o2o">
-      <div class="cta-inner">
-        <div>
-          <div class="cta-badge">POST-TRIP WELLNESS</div>
-          <h3>從阿爾卑斯回來後<br>預約旅後健康評估</h3>
-          <p>本旅程中的高海拔、睡眠、光照與活動量紀錄，可作為旅後生活型態討論的素材。<strong>憑本 App 預約，可安排體組成分析與旅後恢復諮詢。</strong>本區為預約導流，不構成醫療建議或療效承諾。</p>
-        </div>
-        <a class="cta-btn" href="https://line.me/" target="_blank" rel="noopener">LINE 預約評估 →</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -2830,7 +2557,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
       <div class="strategy-card">
         <div class="icon-block">🎓</div>
         <h3>Youth Pass（25 歲以下）</h3>
-        <p class="sans"><strong>未滿 25 歲</strong>者可購 STP Youth：8 日一等艙 CHF 478（比成人 697 省 219）。25 歲生日前最後一年仍適用。本案用戶為年輕醫師<strong>請確認年齡是否符合</strong>。</p>
+        <p class="sans"><strong>未滿 25 歲</strong>者可購 STP Youth：8 日一等艙 CHF 478（比成人 697 省 219）。25 歲生日前最後一年仍適用。本案用戶為年輕旅人<strong>請確認年齡是否符合</strong>。</p>
       </div>
       <div class="strategy-card">
         <div class="icon-block">📱</div>
@@ -3032,7 +2759,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
                 <li><strong>19:00-19:45 Funi Mont Pèlerin 1900 古纜車</strong>（STP 免費 CHF 14）</li>
                 <li><strong>20:00 Le Trois 主餐廳晚餐</strong></li>
               </ol>
-              <p class="sans" style="margin-top:8px;"><strong>D1 STP 節省 ≈ CHF 70</strong>——抗老協議 1 啟動點完整保留。</p>
+              <p class="sans" style="margin-top:8px;"><strong>D1 STP 節省 ≈ CHF 70</strong>——恢復節奏 1 啟動點完整保留。</p>
             </div>
           </li>
           <li>
@@ -3483,8 +3210,8 @@ footer .meta-info { opacity: .6; font-size: 12px; }
             <div class="tl-time sans">12:45–13:15<span class="dur">30 分 · 快速入住</span></div>
             <div class="tl-content">
               <h4>Hotel Mürren Palace 快速入住 + 輕午餐 + Valser 補水</h4>
-              <p class="sans">下纜車步行 3 分至 <strong>Hotel Mürren Palace</strong>。寄存行李、領鑰匙、村內 Coop 買 <strong>1L Valser 礦泉水</strong>（Mg²⁺ 95mg/L）。<strong>抗老協議 2 Hyper-hydration</strong>：慢飲 500-800ml；快速 sandwich 或飯店 light lunch（避油膩、避咖啡因）。</p>
-              <div class="tags"><span class="tag gold">山內唯一夜</span><span class="tag tip">抗老協議 2：Valser 鎂水</span></div>
+              <p class="sans">下纜車步行 3 分至 <strong>Hotel Mürren Palace</strong>。寄存行李、領鑰匙、村內 Coop 買 <strong>1L Valser 礦泉水</strong>（Mg²⁺ 95mg/L）。<strong>恢復節奏 2 Hyper-hydration</strong>：慢飲 500-800ml；快速 sandwich 或飯店 light lunch（避油膩、避咖啡因）。</p>
+              <div class="tags"><span class="tag gold">山內唯一夜</span><span class="tag tip">恢復節奏 2：Valser 鎂水</span></div>
             </div>
           </li>
           <li>
@@ -3501,7 +3228,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
               <div class="note info" style="margin:8px 0;font-size:13px;">
                 <span class="label">為什麼加這個</span>
                 ① <strong>1912 古纜車</strong>補完 Mürren 雙古纜車（Schilthornbahn 2026 新 vs Allmendhubel 1912 老）<br>
-                ② <strong>抗老協議</strong>：高山植物芬多精（α-pinene、β-pinene）+ 紫外線 D 合成 + 6 月花季<br>
+                ② <strong>恢復節奏</strong>：高山植物芬多精（α-pinene、β-pinene）+ 紫外線 D 合成 + 6 月花季<br>
                 ③ <strong>Mürren Palace 設施延伸</strong>：飯店步行 3 分可直達，無摩擦
               </div>
               <div class="tags">
@@ -3658,7 +3385,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
             <div class="tl-content">
               <h4>Mürren Palace 晨間早餐 + Valser 補水 + 退房</h4>
               <p class="sans">飯店請廚房準備<strong>早餐盒</strong>（火車上吃）。<strong>晨間 Alpenglow 約 06:00 達到</strong>——少女峰山頂被晨光反射染紅。<br><strong>★ Jungfraujoch 攻頂前 Hyper-hydration</strong>：早餐配 <strong>500ml Valser 鎂水</strong>，避免咖啡因（利尿）；攜帶剩下 500ml 上山途中小口飲。<br>退房後只背雙肩包下山——登機箱已在 Interlaken Ost 跨夜寄存（D3 已處理），全日無重力。</p>
-              <div class="tags"><span class="tag tip">抗老協議 2：晨間鎂水補</span></div>
+              <div class="tags"><span class="tag tip">恢復節奏 2：晨間鎂水補</span></div>
             </div>
           </li>
           <li>
@@ -3762,21 +3489,21 @@ footer .meta-info { opacity: .6; font-size: 12px; }
             </div>
           </li>
           <li>
-            <div class="tl-time sans">17:00–18:30<span class="dur">90 分 · 抗老協議 3 升級</span></div>
+            <div class="tl-time sans">17:00–18:30<span class="dur">90 分 · 恢復節奏 3 升級</span></div>
             <div class="tl-content">
-              <h4>★ 14 層瀑布探訪 + BAT 冷暴露 + Wim Hof 協議</h4>
+              <h4>★ 14 層瀑布探訪 + 冷水恢復 冷暴露 + 岸上呼吸暖身 協議</h4>
               <p class="sans">飯店外即<strong>Giessbach 瀑布 14 段自由落體</strong>（總落差 500m）。步道貫穿瀑布內側「水簾後步道」、瀑布上方木橋、瀑布中段觀景平台。</p>
               <ol class="sans" style="margin:8px 0 0 18px;padding:0;line-height:1.9;">
                 <li><strong>17:00-17:30 瀑布步道</strong>（飯店出發步行 5 分至中段）：水簾後步道 + 瀑布上方木橋</li>
-                <li><strong>17:30-17:45 岸上 Wim Hof 3 輪</strong>（瀑布岩石坐穩）：30 次深呼吸 → 呼氣末屏息 30s → 4 次深吸氣</li>
+                <li><strong>17:30-17:45 岸上 岸上呼吸暖身 3 輪</strong>（瀑布岩石坐穩）：30 次深呼吸 → 呼氣末屏息 30s → 4 次深吸氣</li>
                 <li><strong>17:45-17:50 瀑布水池冷暴露</strong>（10-14°C 冰川融水，瀑布段底天然池）：浸足 5 分鐘</li>
                 <li><strong>17:50-18:00 4-7-8 呼吸 3 輪</strong>收尾</li>
-                <li><strong>18:00-18:30 漫步回飯店</strong>，30 分內進熱餐給 BAT 燃料</li>
+                <li><strong>18:00-18:30 漫步回飯店</strong>，30 分內進熱餐給 冷水恢復 燃料</li>
               </ol>
               <div class="note warn" style="margin-top:8px;">
-                <span class="label">安全</span>Wim Hof 屏息<strong>絕不在水中或瀑布旁滑石上</strong>進行。坐穩岩石、雙手放膝。瀑布步道部分區段濕滑，穿防滑鞋。
+                <span class="label">安全</span>岸上呼吸暖身 屏息<strong>絕不在水中或瀑布旁滑石上</strong>進行。坐穩岩石、雙手放膝。瀑布步道部分區段濕滑，穿防滑鞋。
               </div>
-              <div class="tags"><span class="tag gold">抗老協議 3 升級版</span></div>
+              <div class="tags"><span class="tag gold">恢復節奏 3 升級版</span></div>
             </div>
           </li>
           <li>
@@ -3826,7 +3553,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
               <tbody>
                 <tr><td><strong>🚞 Giessbachbahn 1879 古纜車</strong></td><td>D4 抵達 15:35 + D5 退房 09:30</td><td>瑞士最古纜車、世界最古水力 funicular。住客全程免費。<strong>每次進出飯店都搭一次</strong>——本案最強儀式感設施</td></tr>
                 <tr><td><strong>🧖 Giessbach Spa</strong>（5★ wellness）</td><td>D4 16:00-17:00 攻 Jungfraujoch 後</td><td>桑拿、土耳其浴、Hammam、<strong>indoor pool 正面湖景落地窗</strong>。住客免費。為 Jungfraujoch 3,454m 下山後的最佳恢復窗</td></tr>
-                <tr><td><strong>💧 14 層瀑布步道</strong></td><td>D4 17:00-18:30 抗老協議 + 21:00 後私享</td><td>瀑布內側「水簾後步道」+ 上方木橋 + 中段觀景台。<strong>住客 19:00 後獨享月光瀑布</strong></td></tr>
+                <tr><td><strong>💧 14 層瀑布步道</strong></td><td>D4 17:00-18:30 恢復節奏 + 21:00 後私享</td><td>瀑布內側「水簾後步道」+ 上方木橋 + 中段觀景台。<strong>住客 19:00 後獨享月光瀑布</strong></td></tr>
                 <tr><td><strong>🍽 Le Tapis Rouge 主餐廳</strong>（米其林指南）</td><td>D4 晚餐 19:30-21:30</td><td>1875 Belle Époque 大廳改建，水晶吊燈 + 木雕天花原樣。主廚 Patrick Mahler。<strong>Tasting menu CHF 145 / 5 道</strong>，Brienz 湖魚 Felchen + Lavaux Chasselas</td></tr>
                 <tr><td><strong>🏛 1875 Belle Époque 大廳</strong></td><td>D4 抵達 15:45 + D5 早餐 08:00</td><td>水晶吊燈、木雕細部、19 世紀東方地毯、reading room 含 Goethe / Twain / Ruskin 筆記</td></tr>
                 <tr><td><strong>🪟 Lake View Junior Suite</strong></td><td>整夜</td><td>湖畔陽台直擊 Brienzersee + 14 層瀑布側視 + Brienzer Rothorn 山脊。<strong>晨間 06:30 可看湖面晨霧緩升</strong></td></tr>
@@ -3871,7 +3598,7 @@ footer .meta-info { opacity: .6; font-size: 12px; }
       </header>
       <div class="day-body">
         <div class="day-summary sans">
-          高山攻頂後第一個完整恢復日，敘事從「垂直登頂」切換為「水平湖行」。<strong>清晨 06:30 享住客獨占的瀑布步道</strong>（公眾步道 19:00-09:00 關閉），晨光紅光 PBM + 浸足協議；08:00 Le Tapis Rouge 1875 Belle Époque 大廳早餐；09:40 搭 1879 古纜車下山；10:48 BLS 湖船至 Interlaken Ost；12:04 IR Luzern-Interlaken Express 經 Brünig 山口齒軌；13:58 抵 Lucerne，<strong>14:20 快速寄行李於 Hotel Montana，立即 Bus 6/8 至 Verkehrshaus 瑞士交通博物館</strong>（STP 100% 免費，CHF 35）2 小時參觀——D6 你會實搭 Rigi Bahn 與 SGV 湖船，<strong>D5 看歷史 → D6 搭實體</strong>。16:45 回 Hotel Montana 正式入住，19:30 PBM 紅光協議 + 20:15 SCALA Ristorante 晚餐。
+          高山攻頂後第一個完整恢復日，敘事從「垂直登頂」切換為「水平湖行」。<strong>清晨 06:30 享住客獨占的瀑布步道</strong>（公眾步道 19:00-09:00 關閉），晨光紅光 晨昏光線 + 浸足協議；08:00 Le Tapis Rouge 1875 Belle Époque 大廳早餐；09:40 搭 1879 古纜車下山；10:48 BLS 湖船至 Interlaken Ost；12:04 IR Luzern-Interlaken Express 經 Brünig 山口齒軌；13:58 抵 Lucerne，<strong>14:20 快速寄行李於 Hotel Montana，立即 Bus 6/8 至 Verkehrshaus 瑞士交通博物館</strong>（STP 100% 免費，CHF 35）2 小時參觀——D6 你會實搭 Rigi Bahn 與 SGV 湖船，<strong>D5 看歷史 → D6 搭實體</strong>。16:45 回 Hotel Montana 正式入住，19:30 晨昏光線 紅光協議 + 20:15 SCALA Ristorante 晚餐。
         </div>
 
         <div class="daily-gmap">
@@ -3893,17 +3620,17 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <div class="subhead sans">時序動線</div>
         <ul class="tl">
           <li>
-            <div class="tl-time sans">06:30–07:30<span class="dur">60 分 · 晨光 PBM + 早起紅利</span></div>
+            <div class="tl-time sans">06:30–07:30<span class="dur">60 分 · 晨光 晨昏光線 + 早起紅利</span></div>
             <div class="tl-content">
-              <h4>★ Giessbach 瀑布晨光私享 + Brienzersee 紅光 PBM</h4>
+              <h4>★ Giessbach 瀑布晨光私享 + Brienzersee 紅光 晨昏光線</h4>
               <p class="sans"><strong>住客早起獨享</strong>——D4 晚上 19:00 後步道公眾關閉，6 月日出 05:30，<strong>06:30 早晨步道才剛開放、零觀光客 1 小時</strong>。</p>
               <ol class="sans" style="margin:8px 0 0 18px;padding:0;line-height:1.9;">
                 <li>06:30 房門出 → 瀑布上方木橋（飯店步行 3 分）拍晨光照射 14 層瀑布</li>
                 <li>07:00 步行下行至瀑布中段「水簾後步道」</li>
-                <li>07:15 抵 Brienzersee 湖畔（funicular 下站旁），<strong>晨光紅光凝視 + 浸足 5 分</strong>（同 D6 Lake Lucerne PBM 協議升級版）</li>
+                <li>07:15 抵 Brienzersee 湖畔（funicular 下站旁），<strong>晨光紅光凝視 + 浸足 5 分</strong>（同 D6 Lake Lucerne 晨昏光線 協議升級版）</li>
                 <li>07:30 回飯店準備早餐</li>
               </ol>
-              <div class="tags"><span class="tag gold">抗老協議 1 + 3 同步</span></div>
+              <div class="tags"><span class="tag gold">恢復節奏 1 + 3 同步</span></div>
             </div>
           </li>
           <li>
@@ -3995,18 +3722,18 @@ footer .meta-info { opacity: .6; font-size: 12px; }
             </div>
           </li>
           <li>
-            <div class="tl-time sans">19:30–20:00<span class="dur">30 分 · 抗老協議</span></div>
+            <div class="tl-time sans">19:30–20:00<span class="dur">30 分 · 恢復節奏</span></div>
             <div class="tl-content">
-              <h4>★ Natural PBM 紅光凝視協議（Drei-Linden 露台）</h4>
-              <p class="sans"><strong>6 月日落約 21:13，19:30–20:00 為日落前 75-100 分的黃金紅光時段</strong>。Hotel Montana 朝西露台正面 Mt. Pilatus 與琉森湖，<strong>長波紅光（630-700nm）+ NIR（700-1000nm）穿透大氣低角度散射</strong>，是診所 PBM 紅光療法的自然版。<br>執行：<br>① <strong>無墨鏡</strong>軟視角凝視湖面與雲層 15 分（不直視太陽）<br>② <strong>前臂與小腿皮膚暴露</strong> 5-10 分（活化 cytochrome c oxidase）<br>③ 同步深呼吸 4-7-8，雙重副交感啟動<br>促進視網膜 OPN3 + 皮膚粒線體 ATP + 夜間褪黑激素分泌。</p>
-              <div class="tags"><span class="tag gold">抗老協議 1：Natural PBM</span></div>
+              <h4>★ 晨昏光線 紅光凝視協議（Drei-Linden 露台）</h4>
+              <p class="sans"><strong>6 月日落約 21:13，19:30–20:00 為日落前 75-100 分的黃金紅光時段</strong>。Hotel Montana 朝西露台正面 Mt. Pilatus 與琉森湖，<strong>長波紅光（630-700nm）+ NIR（700-1000nm）穿透大氣低角度散射</strong>，是湖畔晨昏光線的自然觀景段落。<br>執行：<br>① <strong>無墨鏡</strong>軟視角凝視湖面與雲層 15 分（不直視太陽）<br>② <strong>前臂與小腿皮膚暴露</strong> 5-10 分（活化 cytochrome c oxidase）<br>③ 同步深呼吸 4-7-8，雙重副交感啟動<br>促進視網膜 OPN3 + 皮膚粒線體 ATP + 夜間褪黑激素分泌。</p>
+              <div class="tags"><span class="tag gold">恢復節奏 1：晨昏光線</span></div>
             </div>
           </li>
           <li>
             <div class="tl-time sans">20:15<span class="dur">晚餐</span></div>
             <div class="tl-content">
               <h4>Hotel Montana SCALA Ristorante 晚餐</h4>
-              <p class="sans">PBM 紅光協議結束後直接入主餐廳。飯店附設 <strong>SCALA Ristorante</strong>（米其林指南 / Gault Millau 17 分），主廚 Roman Erni 義法地中海料理。<strong>玻璃帷幕用餐區俯瞰琉森燈火</strong>，是本案最具戲劇性的城市夜景晚餐。Art Nouveau 雕花石膏天花為瑞士境內保存最完整之一。</p>
+              <p class="sans">晨昏光線 紅光協議結束後直接入主餐廳。飯店附設 <strong>SCALA Ristorante</strong>（米其林指南 / Gault Millau 17 分），主廚 Roman Erni 義法地中海料理。<strong>玻璃帷幕用餐區俯瞰琉森燈火</strong>，是本案最具戲劇性的城市夜景晚餐。Art Nouveau 雕花石膏天花為瑞士境內保存最完整之一。</p>
             </div>
           </li>
         </ul>
@@ -4041,15 +3768,15 @@ footer .meta-info { opacity: .6; font-size: 12px; }
               <tbody>
                 <tr><td><strong>🚞 Drahtseilbahn 1910 私人纜車</strong></td><td>D5 抵達 16:20 + D6 退房 07:30</td><td>住客全程免費，4-5 分鐘斜行 110m。<strong>每次進出飯店都搭一次</strong>——本案最具儀式感的飯店設施</td></tr>
                 <tr><td><strong>🍽 SCALA Ristorante</strong>（Gault Millau 17 分）</td><td>D5 晚餐 20:15-22:00</td><td>義法地中海料理。<strong>玻璃帷幕落地窗俯瞰琉森燈火</strong>。Tasting menu CHF 145 / 5 道，À la carte 主菜 CHF 50-75。Art Nouveau 雕花石膏天花 + 楓木胡桃木鑲嵌牆是瑞士境內保存最完整之一</td></tr>
-                <tr><td><strong>🌅 Drei-Linden Terrace 露台</strong></td><td>D5 19:30-20:00 PBM 紅光協議</td><td><strong>朝西，正面 Mt. Pilatus + 琉森湖 + Bürgenstock</strong>。日落前 75-100 分黃金紅光時段，本案抗老協議 1 執行點</td></tr>
+                <tr><td><strong>🌅 Drei-Linden Terrace 露台</strong></td><td>D5 19:30-20:00 晨昏光線 紅光協議</td><td><strong>朝西，正面 Mt. Pilatus + 琉森湖 + Bürgenstock</strong>。日落前 75-100 分黃金紅光時段，本案恢復節奏 1 執行點</td></tr>
                 <tr><td><strong>🧖 Wellness Spa</strong>（2014 翻新）</td><td>D6 早晨 06:30-07:00 退房前</td><td>桑拿、土耳其浴、冰雪噴霧、小型健身房。<strong>住客免費</strong>。下山前快速 30 分桑拿，啟動 D6 Rigi 攻頂前的循環</td></tr>
                 <tr><td><strong>🏛 Art Nouveau 大廳 + Lounge Bar</strong></td><td>D5 晚餐後 22:00-22:30</td><td>Tito Carlevaro 1910 雕飾原物，含彩色玻璃 + 拱頂 + 楓木雕花。<strong>瑞士境內最完整 Jugendstil 室內</strong>（與巴黎 Métro 入口、布魯塞爾 Maison Horta 同期）</td></tr>
-                <tr><td><strong>🛏 房間陽台</strong>（Lake View Junior Suite）</td><td>D5 入住 + D6 早晨</td><td>大窗正對 Mt. Pilatus、琉森湖、Wasserturm。<strong>D6 06:00 晨光時段</strong>是 Lake Lucerne PBM + 冷水浸足協議出發點</td></tr>
+                <tr><td><strong>🛏 房間陽台</strong>（Lake View Junior Suite）</td><td>D5 入住 + D6 早晨</td><td>大窗正對 Mt. Pilatus、琉森湖、Wasserturm。<strong>D6 06:00 晨光時段</strong>是 Lake Lucerne 晨昏光線 + 冷水浸足協議出發點</td></tr>
               </tbody>
             </table>
             <div class="note info" style="margin:8px 0 16px;font-size:13px;">
               <span class="label">N5 黃金時段分配</span>
-              <strong>16:20 Drahtseilbahn 抵達 → 16:30-18:30 露台 + Lucerne 舊城步行 → 19:30-20:00 Drei-Linden PBM 紅光協議 → 20:15 SCALA 晚餐 → 22:00 大廳 Lounge → 23:00 房間</strong>。隔日 06:00 Lake Lucerne 晨光 PBM。<strong>整夜的精華在「PBM 黃昏 → Belle Époque 晚餐 → Art Nouveau 大廳夜酒」三幕結構</strong>。
+              <strong>16:20 Drahtseilbahn 抵達 → 16:30-18:30 露台 + Lucerne 舊城步行 → 19:30-20:00 Drei-Linden 晨昏光線 紅光協議 → 20:15 SCALA 晚餐 → 22:00 大廳 Lounge → 23:00 房間</strong>。隔日 06:00 Lake Lucerne 晨光 晨昏光線。<strong>整夜的精華在「晨昏光線 黃昏 → Belle Époque 晚餐 → Art Nouveau 大廳夜酒」三幕結構</strong>。
             </div>
 
             <h5 sans>建議房型</h5>
@@ -4106,13 +3833,13 @@ footer .meta-info { opacity: .6; font-size: 12px; }
         <div class="subhead sans">時序動線</div>
         <ul class="tl">
           <li>
-            <div class="tl-time sans">06:00–06:30<span class="dur">30 分 · 抗老協議</span></div>
+            <div class="tl-time sans">06:00–06:30<span class="dur">30 分 · 恢復節奏</span></div>
             <div class="tl-content">
-              <h4>★ Lake Lucerne 晨光 PBM + 冷水浸足協議</h4>
-              <p class="sans"><strong>6 月日出約 05:30，06:00 為日出後 30 分黃金晨光時段</strong>。從 Hotel Montana 露台直接看湖面、或快速 Drahtseilbahn 下山步行至 Schweizerhofquai 湖畔：<br>① <strong>無墨鏡 15 分晨光紅光凝視</strong>（湖面散射長波光，重置 SCN）<br>② <strong>湖邊冷水浸足 5 分鐘</strong>（11-14°C，配 Wim Hof 簡化版：30 次深呼吸 + 4-7-8 收尾）<br>③ 同步 NMN 250mg + 早餐前服<br>強化「PBM 1 + BAT 3 + NAD+ 4」三項協議的記憶效應。</p>
+              <h4>★ Lake Lucerne 晨光 晨昏光線 + 冷水浸足協議</h4>
+              <p class="sans"><strong>6 月日出約 05:30，06:00 為日出後 30 分黃金晨光時段</strong>。從 Hotel Montana 露台直接看湖面、或快速 Drahtseilbahn 下山步行至 Schweizerhofquai 湖畔：<br>① <strong>無墨鏡 15 分晨光紅光凝視</strong>（湖面散射長波光，重置 SCN）<br>② <strong>湖邊冷水浸足 5 分鐘</strong>（11-14°C，配 岸上呼吸暖身 簡化版：30 次深呼吸 + 4-7-8 收尾）<br>③ 同步 NMN 250mg + 早餐前服<br>強化「晨昏光線 1 + 冷水恢復 3 + 時差調整 4」三項協議的記憶效應。</p>
               <div class="tags">
                 <span class="tag gold">三協議同步</span>
-                <span class="tag tip">D5 PBM 黃昏 + D6 晨光 = 24h 循環</span>
+                <span class="tag tip">D5 晨昏光線 黃昏 + D6 晨光 = 24h 循環</span>
               </div>
             </div>
           </li>
@@ -4308,12 +4035,12 @@ footer .meta-info { opacity: .6; font-size: 12px; }
                 <tr><td><strong>🎼 Wagner Suite</strong> 體驗</td><td>D6 入住即進入</td><td>1859 年 Richard Wagner 完成《崔斯坦與伊索德》第二幕的房間。含古董 Steinway 鋼琴 + 原木地板 + 湖畔陽台。<strong>可請 concierge 安排小型導覽</strong>，了解 1859 樂譜與房間關係</td></tr>
                 <tr><td><strong>📚 Schweizerhof 書房 Bar</strong></td><td>D6 22:00-23:00 餐後</td><td>1845 古董書架 + Belle Époque 壁爐。Hauser 家族五代相片牆。瑞士產區單一麥威士忌 + Lavaux Resveratrol 紅酒</td></tr>
                 <tr><td><strong>🌊 湖畔露台</strong>（晨間）</td><td>D7 早餐 07:30-08:30 + 退房前</td><td>Schweizerhofquai 直接對接湖畔步道，正面 Mt. Pilatus 倒影。<strong>Mark Twain、托爾斯泰、奧黛麗赫本、26 位君王曾在此露台用餐</strong></td></tr>
-                <tr><td><strong>🛏 Wagner Suite 陽台</strong></td><td>D6 晚 + D7 晨</td><td>湖畔陽台正對琉森湖與 Pilatus 山。<strong>D6 06:00 晨光 PBM 協議</strong>可在此陽台執行，無需下樓</td></tr>
+                <tr><td><strong>🛏 Wagner Suite 陽台</strong></td><td>D6 晚 + D7 晨</td><td>湖畔陽台正對琉森湖與 Pilatus 山。<strong>D6 06:00 晨光 晨昏光線 協議</strong>可在此陽台執行，無需下樓</td></tr>
               </tbody>
             </table>
             <div class="note info" style="margin:8px 0 16px;font-size:13px;">
               <span class="label">N6 黃金時段分配</span>
-              <strong>15:15 入住 Wagner Suite → 15:30-17:00 Verkehrshaus（STP 免費）→ 17:00-18:00 Schweizerhof Spa 桑拿 + 泳池 → 18:30 湖畔露台 PBM 紅光散步 → 19:30 Galerie 餐廳 → 22:00 書房 Bar</strong>。<strong>Spa 卡在「Rigi + Verkehrshaus 走累後」黃金窗</strong>，肌肉熱身 + 副交感啟動，回房進入深睡。
+              <strong>15:15 入住 Wagner Suite → 15:30-17:00 Verkehrshaus（STP 免費）→ 17:00-18:00 Schweizerhof Spa 桑拿 + 泳池 → 18:30 湖畔露台 晨昏光線 紅光散步 → 19:30 Galerie 餐廳 → 22:00 書房 Bar</strong>。<strong>Spa 卡在「Rigi + Verkehrshaus 走累後」黃金窗</strong>，肌肉熱身 + 副交感啟動，回房進入深睡。
             </div>
 
             <h5 sans>建議房型</h5>
@@ -5109,86 +4836,17 @@ window.addEventListener('scroll', highlightNav);
   setInterval(update, 1000);
 })();
 
-// ============ PREMIUM PAYWALL — GUMROAD INTEGRATION（C 模式：僅鎖 #antiaging）============
-// 行程、飯店、STP、抗老科學基礎（#science）全開放——讓 affiliate Booking / Expedia / Klook 連結可見
-// 只鎖深度抗老協議（#antiaging）——這才是 Gumroad PDF 真正獨家
-// 解鎖按鈕導向 Gumroad：https://drallisonlu.gumroad.com/l/alpine-longevity-guide
-(function() {
-  const GUMROAD_URL = 'https://drallisonlu.gumroad.com/l/alpine-longevity-guide';
-  const isUnlocked = localStorage.getItem('alpine_premium_unlocked') === '1';
-
-  // 先清除任何殘留的舊鎖（從 A 模式遺留的 day3-day8、hotels、science）
-  ['day3','day4','day5','day6','day7','day8','science','hotels'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.classList.remove('premium-gate','locked');
-      const old = el.querySelector('.paywall-overlay');
-      if (old) old.remove();
-    }
-  });
-
-  if (isUnlocked) {
-    // 已解鎖：移除所有鎖定狀態
-    document.querySelectorAll('.premium-gate').forEach(el => {
-      el.classList.remove('locked');
-    });
-    document.querySelectorAll('.paywall-overlay').forEach(o => o.remove());
-    return;
-  }
-
-  // 鎖定目標：僅 #antiaging（六大機轉 + 四項精準協議 + 海拔劑量 + 睡眠科學）
-  const lockTargets = ['antiaging'];
-  lockTargets.forEach(id => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.classList.add('premium-gate', 'locked');
-
-    // 避免重複插入
-    if (el.querySelector('.paywall-overlay')) return;
-
-    const overlay = document.createElement('div');
-    overlay.className = 'paywall-overlay';
-    overlay.innerHTML = `
-      <div class="pw-icon">🔒</div>
-      <h3>LONGEVITY PROTOCOL · 醫師深度抗老協議</h3>
-      <p class="pw-desc">由台灣執業醫師親自撰寫的完整環境式抗老處方——六大機轉、四項精準執行協議、海拔劑量反應、睡眠 Glymphatic 系統、八日飲食與監測指南。</p>
-      <ul class="pw-features">
-        <li>🧬 六大抗老機轉分子層級解析（Hormesis / Mitochondria / Autophagy / NAD+ / Telomere / Vagus）</li>
-        <li>🌅 Natural PBM 紅光凝視協議（湖畔晨昏時段）</li>
-        <li>💧 高地 Hyper-hydration 鎂水時程</li>
-        <li>❄️ BAT 冷暴露 + Wim Hof 呼吸協議</li>
-        <li>🧪 NAD+ 抗時差節律補給</li>
-        <li>📊 八日海拔劑量曲線與 SpO₂ / HRV 監測指標</li>
-        <li>🍇 阿爾卑斯飲食抗老成分清單</li>
-        <li>📄 離線 PDF 永久存取 + 終生更新</li>
-      </ul>
-      <a href="${GUMROAD_URL}" target="_blank" rel="noopener" class="pw-btn">🔓 解鎖醫師抗老協議 · UNLOCK</a>
-      <p class="pw-price">$29.99+ USD ・一次購買 ・ 永久存取 ・ Pay-What-You-Want</p>
-    `;
-    el.style.position = 'relative';
-    el.appendChild(overlay);
-  });
-
-  // 全域解鎖函數（Gumroad 購買後可手動觸發，或未來接 webhook）
-  window.__unlockPremium = function() {
-    localStorage.setItem('alpine_premium_unlocked', '1');
-    document.querySelectorAll('.premium-gate').forEach(el => el.classList.remove('locked'));
-    document.querySelectorAll('.paywall-overlay').forEach(o => o.remove());
-    console.log('✅ Premium unlocked!');
-  };
-})();
-
-// ============ MV ACT BADGES on Day Cards ============
+// // ============ MV ACT BADGES on Day Cards ============
 (function() {
   const mvActs = {
-    'day1': { act: 'ACT I', theme: '啟程 · NAD+', icon: '🌅' },
-    'day2': { act: 'ACT I', theme: '啟程 · NAD+', icon: '🌅' },
-    'day3': { act: 'ACT II', theme: '挑戰 · Hormesis', icon: '🏔️' },
-    'day4': { act: 'ACT II', theme: '挑戰 · Autophagy', icon: '🏔️' },
-    'day5': { act: 'ACT III', theme: '沉澱 · PBM', icon: '🌇' },
-    'day6': { act: 'ACT III', theme: '沉澱 · Circadian', icon: '🌇' },
+    'day1': { act: 'ACT I', theme: '啟程 · 時差調整', icon: '🌅' },
+    'day2': { act: 'ACT I', theme: '啟程 · 時差調整', icon: '🌅' },
+    'day3': { act: 'ACT II', theme: '挑戰 · 高山日', icon: '🏔️' },
+    'day4': { act: 'ACT II', theme: '挑戰 · 下撤', icon: '🏔️' },
+    'day5': { act: 'ACT III', theme: '沉澱 · 湖畔', icon: '🌇' },
+    'day6': { act: 'ACT III', theme: '沉澱 · 城市節奏', icon: '🌇' },
     'day7': { act: 'ACT IV', theme: '永恆 · 恢復', icon: '🌌' },
-    'day8': { act: 'ACT IV', theme: '永恆 · Epigenetic Reset', icon: '🌌' },
+    'day8': { act: 'ACT IV', theme: '收束 · 返程', icon: '🌌' },
   };
   Object.entries(mvActs).forEach(([dayId, data]) => {
     const card = document.getElementById(dayId);

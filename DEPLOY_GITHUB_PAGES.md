@@ -20,15 +20,32 @@ Use that URL for Klook PubShare, Booking.com Partner, GetYourGuide, and other af
 
 This public GitHub Pages repository should only publish the website files needed for affiliate review:
 
-- `index.html`
-- `confirm.html`
-- `daily.html`
+- `index.html`（旅遊行程主頁，已移除私人商業內容）
+- `daily.html`（每日詳細行程）
 - `legal/privacy.html`
 - `legal/terms.html`
 - `.nojekyll`
 - `README.md`
 
-Internal app packaging files, Android signing files, business setup notes, and build artifacts are ignored by `.gitignore`.
+### 絕對不可上線（已被 `.gitignore` 排除）
+
+- `private/`（私人營運資料夾，含內部企劃、申請手冊、訂房追蹤與 build scripts）
+  - `private/private_dashboard.html`
+  - `private/confirm.html`（含真實訂單與金流資訊）
+  - `private/AFFILIATE_SETUP.md`
+  - `private/build_public.sh`
+  - `private/index_public.html` / `private/index_sale.html`（build 產物）
+- `android/`、`app/`、`store/`、`scripts/`、`capacitor.config.json`、`package.json`、`package-lock.json`
+
+### 部署前自我檢查
+
+每次 push 前執行：
+
+```bash
+git ls-files | grep -E "^(private/|confirm\.html|AFFILIATE)" && echo "❌ 私人檔案外洩" || echo "✅ 公開檔案乾淨"
+```
+
+若有任何匹配輸出，立即 `git rm --cached <檔案>` 並重新 commit。
 
 ## First-Time Terminal Commands
 

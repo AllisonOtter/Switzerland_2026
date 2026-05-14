@@ -6,8 +6,6 @@ node_modules/
 android/
 app/
 store/
-AFFILIATE_SETUP.md
-index_modified.html
 capacitor.config.json
 package-lock.json
 package.json
@@ -28,8 +26,9 @@ android/app/*.keystore
 *.aab
 *.apk
 
-# Private internal dashboard — never publish
+# ========================================================================
+# PRIVATE INTERNAL DASHBOARD — NEVER PUBLISH
+# Contains: monetization playbook, clinic funnel, App launch strategy,
+# affiliate setup, confirm.html (real booking/financial data), build scripts.
+# ========================================================================
 private/
-index_public.html
-index_sale.html
-build_public.sh
