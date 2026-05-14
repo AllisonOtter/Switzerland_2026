@@ -1,6 +1,6 @@
-# Switzerland 2026 Luxury Travel Guide
+# dr. alu · Switzerland 2026 Luxury Travel Guide
 
-Public travel guide and trip-operations site for a 2026 Switzerland itinerary.
+Public travel guide and trip-operations site by dr. alu for a 2026 Switzerland itinerary.
 
 ## GitHub Pages
 
@@ -19,7 +19,6 @@ Some travel booking links may be affiliate links. The site may receive a commiss
 ## Local Checks
 
 ```bash
-python3 -m html.parser index.html confirm.html daily.html legal/privacy.html legal/terms.html
+python3 -m html.parser index.html daily.html legal/privacy.html legal/terms.html
 npm run validate
 ```
-
