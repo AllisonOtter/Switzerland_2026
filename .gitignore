@@ -27,3 +27,9 @@ android/app/*.keystore
 # Generated release bundles are rebuilt locally and should not be committed.
 *.aab
 *.apk
+
+# Private internal dashboard — never publish
+private/
+index_public.html
+index_sale.html
+build_public.sh
